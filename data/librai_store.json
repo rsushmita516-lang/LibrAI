@@ -1,0 +1,694 @@
+{
+  "documents": {
+    "doc_93885f20c9aff7b3": {
+      "id": "doc_93885f20c9aff7b3",
+      "filename": "doc_93885f20c9aff7b3_NewSyllabus_Computer oriented numerical analysis.pdf",
+      "originalName": "NewSyllabus_Computer oriented numerical analysis.pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 163961,
+      "checksum": "a73a488d2ad4f04439700bf92ceced9cad71c0c1291619b5411bbd092bed3d40",
+      "status": "ready",
+      "chunkCount": 4,
+      "createdAt": "2026-08-23T19:04:46.548Z",
+      "updatedAt": "2026-08-23T19:04:47.588Z",
+      "pageCount": 4,
+      "totalTokens": 1194,
+      "summary": "Course Name: COMPUTER ORIENTED NUMERICAL ANALYSIS\nCourse Level : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques.\nTopics included are numerical error, root-finding, interpolation and polynomial approximatio..."
+    }
+  },
+  "chunks": {
+    "doc_93885f20c9aff7b3": [
+      {
+        "id": "chk_doc_9388_0",
+        "documentId": "doc_93885f20c9aff7b3",
+        "chunkIndex": 0,
+        "text": "Course Name: COMPUTER ORIENTED NUMERICAL ANALYSIS\nCourse Level : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integration, and differential equations. Pre-requisites:\nBasics of Differentiation and Integration\nCourse Contents/Syllabus:\nWeightage (%)\nModule I: Introduction\n15 Introduction to Numerical Analysis, Application Area of N.A., Numbers and Their Accuracy, Mathematical,\npreliminaries, Error Analysis, Absolute, Relatives, Truncation and Rounding Error. Module II: Solution of Linear Algebraic Equations\n15 Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values,\nGauss Seidel Iterative Method, Gauss Elimination Method\nL T P/S SW/FW No. of\nPSDA\nTOTAL\nCREDIT\nUNITS\n2 0 2 2 5 4",
+        "pageNumber": 1,
+        "startChar": 0,
+        "endChar": 955,
+        "tokenCount": 239,
+        "keywords": [
+          "course",
+          "numerical",
+          "method",
+          "analysis",
+          "error",
+          "introduction",
+          "gauss",
+          "credit",
+          "units",
+          "application",
+          "approximation",
+          "differentiation",
+          "integration",
+          "equations",
+          "module"
+        ]
+      },
+      {
+        "id": "chk_doc_9388_1",
+        "documentId": "doc_93885f20c9aff7b3",
+        "chunkIndex": 1,
+        "text": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation and Curve Fitting\n20 Types of Operators, Basic Definition, Forward Differences, Backward Differences, Central Differences,\nNewton Forward/Backward/Central Differences Formula, Newton’s Divided Difference Formula, Lagrange’s\nMethod. Module V: Numerical Differentiation & Integration\n15\nNumerical Differentiation based on Interpolation Formula, Numerical Integration, Trapezoidal Rule,\nSimpson’s 1/3 rule, Simpson’s 3/8 Rule, Weddle’s Rule. Module VI: Numerical Solution to ODE\n15 Basic Definition, Euler’s Method, Modified Euler’s Method, Runga Kutta Method (2nd and 4th Order)\nStudent Learning Outcomes:\nAfter completion of the course,the student will be able to:\nExplain concept of various numerical methods, in particular, with reference to numerical solution of non linear equations and system\nof linear equations, interpolation, numerical differentiation and integration and numerical solution of ordinary differential equations. Apply important theorems. Use different formulae for various numerical methods to be covered with an aim of understand the fundamentals, concepts and\npractical use of these methods in the field of computer sciences and applications.",
+        "pageNumber": 2,
+        "startChar": 0,
+        "endChar": 1386,
+        "tokenCount": 347,
+        "keywords": [
+          "method",
+          "numerical",
+          "module",
+          "solution",
+          "equations",
+          "differences",
+          "rule",
+          "newton",
+          "interpolation",
+          "formula",
+          "differentiation",
+          "integration",
+          "methods",
+          "basic",
+          "definition"
+        ]
+      },
+      {
+        "id": "chk_doc_9388_2",
+        "documentId": "doc_93885f20c9aff7b3",
+        "chunkIndex": 2,
+        "text": "PSDA:\n• Applications of Numerical Methods in various domains\n• Numerical problems on Interpolation\n• Numerical problems on Numerical Integration and Differentiation, Ordinary Differential Equations\n• Numerical problems on solution of algebraic and transcendental equations\n• Numerical problems on solution of system of linear equations\nPedagogy for Course Delivery:\n• Lectures,\n• Assignments,\n• Presentations,\n• Online / Practical Test and\n• Class Test\n• Blended Learning using flipped mode\nLab/ Practical’s details, if applicable:\nList of Experiments:\n1. Implementation of Newton’s forward interpolation formula\n2. Implementation of Newton’s backward interpolation formula\n3. Implementation of Lagrange’s interpolation formula\n4. Implementation of Trapezoidal rule\n5. Implementation of Simpson’s 1/3 rule\n6. Implementation of Simpson’s 3/8 rule\n7. Implementation of Weddle’s rule\n8. Implementation of Simpson’s 1/3 rule\n9. Implementation of Bisection method\n10. Implementation of Newton-Raphson method\n11. Implementation of Regula Falsi Method\n12. Implementation of Gauss Seidel Method\n13. Implementation of Gauss Elimination Method\n14. Implementation of Euler method\n15. Implementation of Runge Kutta Method",
+        "pageNumber": 3,
+        "startChar": 0,
+        "endChar": 1209,
+        "tokenCount": 303,
+        "keywords": [
+          "implementation",
+          "method",
+          "numerical",
+          "rule",
+          "problems",
+          "interpolation",
+          "equations",
+          "formula",
+          "simpson",
+          "solution",
+          "practical",
+          "test",
+          "newton",
+          "gauss",
+          "psda"
+        ]
+      },
+      {
+        "id": "chk_doc_9388_3",
+        "documentId": "doc_93885f20c9aff7b3",
+        "chunkIndex": 3,
+        "text": "Assessment/ Examination Scheme:\nTheory L/T (%) Lab/Practical/Studio (%) Total\n75% 25% 100%\nContinuous Assessment/Internal Assessment End Term Examination\nComponents (Drop down) Mid Term Exam Home Assignment Presentation/Viva Attendance\nWeightage (%)\n20% 20% 5% 5% 50%\nLab/ Practical/ Studio Assessment:\nContinuous Assessment/Internal Assessment End Term Practical\nExamination\nComponents (Drop down Lab record Performance Viva Attendance\nWeightage (%) 15 20 10 5 50\nText:\n1. Mollah S. A., Numerical Analysis and Computational Procedures, Books & Allied Ltd; 5th Revised edition (1 January 2000)\n2. Sastry S. S., Introductory Methods of Numerical Analysis, Prentice Hall India Learning Private Limited; Fifth edition (1 January\n2012)\n3. Jain M. K., Iyengar S. R. K., Jain R. K., Numerical Methods: For Scientific and Engineering Computation, New Age International\n(1 January 2012)\nReferences:\nRajaraman V, Computer Oriented Numerical Methods, PHI, 3rd Edition, 2006. Krishnamurthy, E.V., Sen, S.K, Computer Based Numerical Algorithms, Affiliated East-west Press Pvt Ltd, 1st Ediiton, 2009. Stoer, Bullrich, Computer Oriented Numerical Methods, Springer Verlag, 1980.",
+        "pageNumber": 4,
+        "startChar": 0,
+        "endChar": 1164,
+        "tokenCount": 291,
+        "keywords": [
+          "assessment",
+          "numerical",
+          "methods",
+          "examination",
+          "lab",
+          "practical",
+          "term",
+          "edition",
+          "january",
+          "computer",
+          "2012",
+          "studio",
+          "continuous",
+          "internal",
+          "end"
+        ]
+      }
+    ]
+  },
+  "sessions": {
+    "smoke-ollama": [
+      {
+        "id": "msg_6b1beef9d71b",
+        "role": "user",
+        "content": "What is the target chunk size?",
+        "timestamp": "2026-08-23T17:46:55.209Z"
+      },
+      {
+        "id": "msg_01caf2dbea7c",
+        "role": "assistant",
+        "content": "Based on the provided document excerpts:\n\n[Passage 1 | Page 1 | Chunk 0]\n# LibrAI Technical Reference & Architecture Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architecture comprising:\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing. 2. Semantic Chunking: Sentence-boundary packaging ...\n\n*(Note: LLM provider was unreachable; response extracted directly from highest-ranking grounded document passages.)*",
+        "timestamp": "2026-08-23T17:46:55.209Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architectu ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 111
+      }
+    ],
+    "sess_laqqwxbw": [
+      {
+        "id": "msg_09447bf10936",
+        "role": "user",
+        "content": "what was the doc about ?",
+        "timestamp": "2026-08-23T18:00:11.473Z"
+      },
+      {
+        "id": "msg_4b2333313b1f",
+        "role": "assistant",
+        "content": "Based on the provided document excerpts:\n\n[Passage 1 | Page 1 | Chunk 0]\n%PDF-1.5\n%����\n%PDF-1.5\n%����\n1 0 obj\n<</ColorSpace/DeviceRGB/Subtype/Image/Height 3745/Filter/DCTDecode/Type/XObject/Width 2794/BitsPerComponent 8/Length 668848>>stream\n����\u0000XExif\u0000\u0000II*\u0000\b\u0000\u0000\u0000\u0004\u0000\u0000\u0001\u0004\u0000\u0001\u0000\u0000\u0000�\n\u0000\u0000\u0001\u0001\u0004\u0000\u0001\u0000\u0000\u0000�\u000e\u0000\u0000i�\u0004\u0000\u0001\u0000\u0000\u0000>\u0000\u0000\u0000\u0012\u0001\u0003\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\b�\u0004\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��\u0000\u0010JFIF\u0000\u0001\u0001\u0000\u0000\u0001\u0000\u0001\u0000\u0000��\u0000�\u0000\b\b\b\b \b \u000e\f\u000e\n\u0013\u0011\u0010\u0010\u0011\u0013\u001c\u0014\u0016\u0014\u0016\u0014\u001c+\u001b\u001f\u001b\u001b\u001f\u001b+&.%#%.&D5//5DNB>BN_UU_wqw���\u0001\b\b\b\b \b\n\n[Passage 2 | Page 1 | Chunk 1]\n\u000e\f\u000e\n\u0013\u0011\u0010\u0010\u0011\u0013\u001c\u0014\u0016\u0014\u0016\u0014\u001c+\u001b\u001f\u001b\u001b\u001f\u001b+&.%#%.&D5//5DNB>BN_UU_wqw�����\u0000\u0011\b\u000e�\n�\u0003\u0001\"\u0000\u0002\u0011\u0001\u0003\u0011\u0001��\u0000�\u0000\u0001\u0000\u0003\u0001\u0001\u0001\u0001...\n\n*(Note: LLM provider was unreachable; response extracted directly from highest-ranking grounded document passages.)*",
+        "timestamp": "2026-08-23T18:00:11.473Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_d764_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0,
+            "excerpt": "%PDF-1.5\n%����\n%PDF-1.5\n%����\n1 0 obj\n<</ColorSpace/DeviceRGB/Subtype/Image/Height 3745/Filter/DCTDecode/Type/XObject/Width 2794/BitsPerComponent 8/Length 668848>>stream\n����\u0000XExif\u0000\u0000II*\u0000\b\u0000\u0000\u0000\u0004\u0000\u0000\u0001\u0004\u0000\u0001\u0000\u0000\u0000�\n\u0000\u0000\u0001\u0001\u0004\u0000\u0001\u0000\u0000\u0000�\u000e\u0000\u0000i�\u0004\u0000\u0001\u0000\u0000\u0000>\u0000\u0000\u0000\u0012\u0001\u0003\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\b�\u0004\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+          },
+          {
+            "chunkId": "chk_doc_d764_1",
+            "pageNumber": 1,
+            "chunkIndex": 1,
+            "relevanceScore": 0,
+            "excerpt": "\u000e\f\u000e\n\u0013\u0011\u0010\u0010\u0011\u0013\u001c\u0014\u0016\u0014\u0016\u0014\u001c+\u001b\u001f\u001b\u001b\u001f\u001b+&.%#%.&D5//5DNB>BN_UU_wqw�����\u0000\u0011\b\u000e�\n�\u0003\u0001\"\u0000\u0002\u0011\u0001\u0003\u0011\u0001��\u0000�\u0000\u0001\u0000\u0003\u0001\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0007\b\u0006\u0005\u0004\u0003\u0002\u0010\u0000\u0002\u0001\u0003\u0002\u0004\u0004\u0004\u0002\u0006\u0005\u0006 \u0007\u0001\u0019\u0000\u0001\u0002\u0003\u0004\u0011\u0005\u0006\u0007\u0012!1\u0013AQa\u0014\"q�2�\u0015#BR��\u0016br��$36u��\u0017C�������%&4FScs��DT��5EUdet����7'V���G��\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0003\u0004\u0005\u0011\u0001\u0001\u0000\u0001\u0003\u0003\u0002\u0005\u0003\u0003\u0003\u0004\u0003\u0001\u0000\u0003\u0000\u0001\u0011\u0002!1\u0012AQaq\u0003\"���2��B�"
+          },
+          {
+            "chunkId": "chk_doc_d764_2",
+            "pageNumber": 1,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "\u0013G\u0015!l���%\u000f�t�#���N�y�����$���i�uc\u001f�\n���9y$Ϭ�m|\b��W�X>��x�|�>-��<i�m�\u0000vr\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004�\u0000(\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000e0BXϹ 1�&\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00009�~\\\u0000\u0000\u0000\u0004&�fI %�\u0012\u0000\u0000�}�\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000����\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0005����\u0000\u0000\u0000\u0000��2@\u0000\u0000\u0000\u0000\u0000\u0000\f�͗�c=\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+          },
+          {
+            "chunkId": "chk_doc_d764_3",
+            "pageNumber": 1,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�H\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0019I���� \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000/��FI��\u001eȟ\n�\nl�\\�N��b<�y�@\u0007T\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012K�\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u000b8�ܐ\u0001V�����@\u0000�\u001d�\u0000\b\u0000\u0000\u0000\u0000\u0000 �\u0003+�(\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\f\u0000\u0000"
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "insufficient",
+        "confidenceScore": 0,
+        "latencyMs": 1108
+      }
+    ],
+    "sess_g39z8bkw": [
+      {
+        "id": "msg_5b6351cc7360",
+        "role": "user",
+        "content": "Give me summary of the doc",
+        "timestamp": "2026-08-23T18:23:43.300Z"
+      },
+      {
+        "id": "msg_7879e9fd66d7",
+        "role": "assistant",
+        "content": "Based on the provided document excerpts:\n\n[Passage 1 | Page 1 | Chunk 159]\nnf���\u001b���Y~\u0013_���,#���\u0003��\u0000��\u0000��'0q�,ޚ\u001d��v���mk;*�TaRx�����Q�yu�XY�u�����\u001c�����0Fz�Ա�\u001a�[{�S���i�\u000f����*\n�I��\u001dM/oý�l�:z\u0005���x������������\u001e$����m:����\u0014ڢ�O�X�M�\u001e����N����w5h[΅{y�5���aO.2RX�x�Fq��E��t�-7K�����V��N4�8ԗ,\u0016\"�T��\u00003C�}�e�4{K\u000bjT��N>=XG\u000e�\\|ӓyo/�{.��}�n�\u0000�Oq�\u0000���\u0000����Q�T����\b�*wq��T�u%�\u0014�>h�[��Ѻ��m^��\u001a��N�\u001fiFk\n?�2���i�\u000f\u0015��?N��\n:���%.f��&�o�]zdi�s~��V\u0014v��:U�Qд�֌[J��*2��c\b���M���\u0017��w6�\u001b[�oVT�rR�4^\u001f-J����6�O��)�k��T�T�g\u0019M%��\np�M�����\u0013\u0018�G-�q��3�մj3����f���Y�s?�-}��...\n\n*(Note: LLM provider was unreachable; response extracted directly from highest-ranking grounded document passages.)*",
+        "timestamp": "2026-08-23T18:23:43.300Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_d764_159",
+            "pageNumber": 1,
+            "chunkIndex": 159,
+            "relevanceScore": 1,
+            "excerpt": "... �^��d�=)��_�^fz����߷z\n�E�שRҧx�դۧ4����#��L\u0019�{x���Nv�S��t�S���ME}�kM�o�\u0015\u001ax\u0000`c�#k�����H]U�++�ֶ��H�\u0014�㔽e��u�_�w�.�o�^i���oN4�ԍWJj\u0011���K\u000b c\u001d\u0011��SK���u/\u000e)S�P�����w��l�\u001c1�:�?ѡ:pp�:�ZN2^,���ϙ�1�y�\u001c\n\u001e<��R���X,|�\u0017*m�t�\u001c\u001c6�����kZ�9���QM�R��*�~r�#����O�m��)�h�{R�Y�������5�\u000fm ..."
+          },
+          {
+            "chunkId": "chk_doc_d764_192",
+            "pageNumber": 1,
+            "chunkIndex": 192,
+            "relevanceScore": 0.9337,
+            "excerpt": "... m~+J��5Bz�K'\u0004�ѭ<A7�^��^�1����zD-j�R�Iӭ\u0005$� �<�%�=�|��B�����{mE����u�<��(�BI�\u0000Zi4�\n�%��j�m�\u001f��ݛCJ�v0��S��9J�h<J��ߣ���T����n��\u0014i�\u0017\u0017\u0010ĝKj�Ib�*�ħ��\u000eME�\u0000\u0003N��ZM������m\u0018N��A��|�\u0016�b��>Y(�a�3�v��d�gW���۵E�w�#i��\u001a���q�_s��M�!�kW�K���)7�P�X�������Z����i6zw�M׋�\u001euRU+��M�\u0011Z ..."
+          },
+          {
+            "chunkId": "chk_doc_d764_97",
+            "pageNumber": 1,
+            "chunkIndex": 97,
+            "relevanceScore": 0.8526,
+            "excerpt": "... oF���eR\u0011r�*\u0015)�_�/\u00161��jM}��\u0000���s//�?����4�-gK��/a)P���.W�\u001c4ԓ�Me\u001e&���>ҍ����\u0015'r��:򌤔3��c\u001c.��â3�\u001ckֹմ\n2�g?\u0006s�(���Zj\u0011��\\#@�6��g���?p�]�V��!�n���Jm�a�b)�o�A\u0016ww:]�4�6�ܡkmJ�e.�R��o���7\u0006�=SBմ�rs��֥\u0007?§85\u0016����n���Ǜ\u0013h�q�\u000b�*�止�Bs�\u0005\u001cT��8��Ļ5��O�cX�;{Iۺ};-:�S�R��R���R^r��� ..."
+          },
+          {
+            "chunkId": "chk_doc_d764_169",
+            "pageNumber": 1,
+            "chunkIndex": 169,
+            "relevanceScore": 0.8252,
+            "excerpt": "... J7�WV��i\\Q�)��1��_�<\n���m=*��N�U��_�K\u000f�J)c�\u0013�\u0001s��⍚������)ҍ:�me�è�k���\u001e\u0017\u0005.��lꔪO0��+R���X8ƣ_�M���֩ie�/��\\Ɲ�߇N�<��1R2�\u0017��w���%mZ�ЯV�7\u0018��*Λk�AB\u0010��\u0000j-\u0017��h\u0000\b�\u0000\u0000\u0000\u0000\u0000\u0001@�֍�\u001eaR��\bʥ8'.���j /v�\u0017�\u0015�\u0012�\u001d}�\u000b}SK���ZEF\u000b��U�d䢛iFQo1�f3��V0(�|\\ܚ\u001d�+mŶ+;�>Z�n��K�y\\\u001aϫ�Oc��8��7d���:� ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 947
+      }
+    ],
+    "sess_tt765rx6": [
+      {
+        "id": "msg_5c08c2629c07",
+        "role": "user",
+        "content": "Give me the summary of the doc",
+        "timestamp": "2026-08-23T18:31:26.697Z"
+      },
+      {
+        "id": "msg_068b88906adf",
+        "role": "assistant",
+        "content": "I don't see a document provided. Could you please share the document you'd like me to summarize, and I'll do my best to provide a concise summary?",
+        "timestamp": "2026-08-23T18:31:26.697Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_d764_159",
+            "pageNumber": 1,
+            "chunkIndex": 159,
+            "relevanceScore": 1,
+            "excerpt": "... �^��d�=)��_�^fz����߷z\n�E�שRҧx�դۧ4����#��L\u0019�{x���Nv�S��t�S���ME}�kM�o�\u0015\u001ax\u0000`c�#k�����H]U�++�ֶ��H�\u0014�㔽e��u�_�w�.�o�^i���oN4�ԍWJj\u0011���K\u000b c\u001d\u0011��SK���u/\u000e)S�P�����w��l�\u001c1�:�?ѡ:pp�:�ZN2^,���ϙ�1�y�\u001c\n\u001e<��R���X,|�\u0017*m�t�\u001c\u001c6�����kZ�9���QM�R��*�~r�#����O�m��)�h�{R�Y�������5�\u000fm ..."
+          },
+          {
+            "chunkId": "chk_doc_d764_192",
+            "pageNumber": 1,
+            "chunkIndex": 192,
+            "relevanceScore": 0.9337,
+            "excerpt": "... m~+J��5Bz�K'\u0004�ѭ<A7�^��^�1����zD-j�R�Iӭ\u0005$� �<�%�=�|��B�����{mE����u�<��(�BI�\u0000Zi4�\n�%��j�m�\u001f��ݛCJ�v0��S��9J�h<J��ߣ���T����n��\u0014i�\u0017\u0017\u0010ĝKj�Ib�*�ħ��\u000eME�\u0000\u0003N��ZM������m\u0018N��A��|�\u0016�b��>Y(�a�3�v��d�gW���۵E�w�#i��\u001a���q�_s��M�!�kW�K���)7�P�X�������Z����i6zw�M׋�\u001euRU+��M�\u0011Z ..."
+          },
+          {
+            "chunkId": "chk_doc_d764_97",
+            "pageNumber": 1,
+            "chunkIndex": 97,
+            "relevanceScore": 0.8526,
+            "excerpt": "... oF���eR\u0011r�*\u0015)�_�/\u00161��jM}��\u0000���s//�?����4�-gK��/a)P���.W�\u001c4ԓ�Me\u001e&���>ҍ����\u0015'r��:򌤔3��c\u001c.��â3�\u001ckֹմ\n2�g?\u0006s�(���Zj\u0011��\\#@�6��g���?p�]�V��!�n���Jm�a�b)�o�A\u0016ww:]�4�6�ܡkmJ�e.�R��o���7\u0006�=SBմ�rs��֥\u0007?§85\u0016����n���Ǜ\u0013h�q�\u000b�*�止�Bs�\u0005\u001cT��8��Ļ5��O�cX�;{Iۺ};-:�S�R��R���R^r��� ..."
+          },
+          {
+            "chunkId": "chk_doc_d764_169",
+            "pageNumber": 1,
+            "chunkIndex": 169,
+            "relevanceScore": 0.8252,
+            "excerpt": "... J7�WV��i\\Q�)��1��_�<\n���m=*��N�U��_�K\u000f�J)c�\u0013�\u0001s��⍚������)ҍ:�me�è�k���\u001e\u0017\u0005.��lꔪO0��+R���X8ƣ_�M���֩ie�/��\\Ɲ�߇N�<��1R2�\u0017��w���%mZ�ЯV�7\u0018��*Λk�AB\u0010��\u0000j-\u0017��h\u0000\b�\u0000\u0000\u0000\u0000\u0000\u0001@�֍�\u001eaR��\bʥ8'.���j /v�\u0017�\u0015�\u0012�\u001d}�\u000b}SK���ZEF\u000b��U�d䢛iFQo1�f3��V0(�|\\ܚ\u001d�+mŶ+;�>Z�n��K�y\\\u001aϫ�Oc��8��7d���:� ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 181329
+      }
+    ],
+    "sess_y714en9e": [
+      {
+        "id": "msg_800ce39723e4",
+        "role": "user",
+        "content": "summarize the document",
+        "timestamp": "2026-08-23T18:35:43.124Z"
+      },
+      {
+        "id": "msg_af47671c64c9",
+        "role": "assistant",
+        "content": "**LibrAI Technical Reference & Architecture Manual**\n\n**Overview and Core Architecture**\n\nLibrAI is a high-performance AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. Its decoupled layered architecture consists of:\n\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing.\n2. Semantic Chunking: Sentence-boundary packaging with an 800-token target size and a 120-token sliding overlap window.\n3. Hybrid Retrieval: Combining BM25 keyword matching with dense vector similarity and Reciprocal Rank Fusion (RRF).\n4. Redis Caching & Rate Limiting: Utilizing sliding-window rate limiters, multi-turn conversation session stores with configurable TTL, and normalized query response caching.\n\n**Retrieval Strategies and Context Management**\n\nTo prevent context overflow and model hallucination:\n\n* Only top-k highest scoring passages (default: 4 chunks) are passed to the LLM system prompt.\n* Conversation history is trimmed dynamically to maintain strict adherence to model context limits (max 1,200 history tokens).\n* The prompt enforces strict negative grounding: if a user's question cannot be completely answered by the context, the model explicitly refuses to speculate.\n\n**Evidence Mode & Grounding Verification**\n\nLibrAI's unique \"Evidence Mode\" feature provides:\n\n* Exact character excerpt extraction and chunk citations.\n* Automated confidence score calculated from BM25 and semantic similarity weights.\n* Grounding status classification: 'supported' (confidence >= 0.45), 'insufficient' (low confidence or missing evidence), or 'unsupported' (irrelevant query).\n\n**Performance Benchmarks and Scalability**\n\nUnder typical production loads:\n\n* Cache hits return in under 15ms with the header \"cached: true\".\n* Chunking processes 100 pages of text in under 450ms.\n* Hybrid BM25 lookup evaluates across 10,000 chunks in sub-8ms latency.\n* Supported file types include PDF, TXT, and Markdown files up to 10MB in size.",
+        "timestamp": "2026-08-23T18:35:43.149Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... es, assessment tools, and enterprise document intelligence. The system features a decoupled layered architecture comprising:\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing. 2. Semantic Chunking: Sentence-bou ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 142868
+      }
+    ],
+    "sess_9czur7fu": [
+      {
+        "id": "msg_28775b9bf3ff",
+        "role": "user",
+        "content": "Summarize the document",
+        "timestamp": "2026-08-23T18:41:13.294Z"
+      },
+      {
+        "id": "msg_4b95e217e9a1",
+        "role": "assistant",
+        "content": "**LibrAI Technical Reference & Architecture Manual**\n\n**Overview and Core Architecture**\n\nLibrAI is a high-performance AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. Its decoupled layered architecture consists of:\n\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing.\n2. Semantic Chunking: Sentence-boundary packaging with an 800-token target size and a 120-token sliding overlap window.\n3. Hybrid Retrieval: Combining BM25 keyword matching with dense vector similarity and Reciprocal Rank Fusion (RRF).\n4. Redis Caching & Rate Limiting: Utilizing sliding-window rate limiters, multi-turn conversation session stores with configurable TTL, and normalized query response caching.\n\n**Retrieval Strategies and Context Management**\n\nTo prevent context overflow and model hallucination:\n\n* Only top-k highest scoring passages (default: 4 chunks) are passed to the LLM system prompt.\n* Conversation history is trimmed dynamically to maintain strict adherence to model context limits (max 1,200 history tokens).\n* The prompt enforces strict negative grounding: if a user's question cannot be completely answered by the context, the model explicitly refuses to speculate.\n\n**Evidence Mode & Grounding Verification**\n\nLibrAI's unique \"Evidence Mode\" feature provides:\n\n* Exact character excerpt extraction and chunk citations.\n* Automated confidence score calculated from BM25 and semantic similarity weights.\n* Grounding status classification: 'supported' (confidence >= 0.45), 'insufficient' (low confidence or missing evidence), or 'unsupported' (irrelevant query).\n\n**Performance Benchmarks and Scalability**\n\nUnder typical production loads:\n\n* Cache hits return in under 15ms with the header \"cached: true\".\n* Chunking processes 100 pages of text in under 450ms.\n* Hybrid BM25 lookup evaluates across 10,000 chunks in sub-8ms latency.\n* Supported file types include PDF, TXT, and Markdown files up to 10MB in size.",
+        "timestamp": "2026-08-23T18:41:13.294Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... es, assessment tools, and enterprise document intelligence. The system features a decoupled layered architecture comprising:\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing. 2. Semantic Chunking: Sentence-bou ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 5
+      }
+    ],
+    "sess_2f0kmdqf": [
+      {
+        "id": "msg_1c7b5a74c698",
+        "role": "user",
+        "content": "Summarize the document",
+        "timestamp": "2026-08-23T18:41:45.964Z"
+      },
+      {
+        "id": "msg_639d2b46d257",
+        "role": "assistant",
+        "content": "**LibrAI Technical Reference & Architecture Manual**\n\n**Overview and Core Architecture**\n\nLibrAI is a high-performance AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. Its decoupled layered architecture consists of:\n\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing.\n2. Semantic Chunking: Sentence-boundary packaging with an 800-token target size and a 120-token sliding overlap window.\n3. Hybrid Retrieval: Combining BM25 keyword matching with dense vector similarity and Reciprocal Rank Fusion (RRF).\n4. Redis Caching & Rate Limiting: Utilizing sliding-window rate limiters, multi-turn conversation session stores with configurable TTL, and normalized query response caching.\n\n**Retrieval Strategies and Context Management**\n\nTo prevent context overflow and model hallucination:\n\n* Only top-k highest scoring passages (default: 4 chunks) are passed to the LLM system prompt.\n* Conversation history is trimmed dynamically to maintain strict adherence to model context limits (max 1,200 history tokens).\n* The prompt enforces strict negative grounding: if a user's question cannot be completely answered by the context, the model explicitly refuses to speculate.\n\n**Evidence Mode & Grounding Verification**\n\nLibrAI's unique \"Evidence Mode\" feature provides:\n\n* Exact character excerpt extraction and chunk citations.\n* Automated confidence score calculated from BM25 and semantic similarity weights.\n* Grounding status classification: 'supported' (confidence >= 0.45), 'insufficient' (low confidence or missing evidence), or 'unsupported' (irrelevant query).\n\n**Performance Benchmarks and Scalability**\n\nUnder typical production loads:\n\n* Cache hits return in under 15ms with the header \"cached: true\".\n* Chunking processes 100 pages of text in under 450ms.\n* Hybrid BM25 lookup evaluates across 10,000 chunks in sub-8ms latency.\n* Supported file types include PDF, TXT, and Markdown files up to 10MB in size.",
+        "timestamp": "2026-08-23T18:41:45.964Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... es, assessment tools, and enterprise document intelligence. The system features a decoupled layered architecture comprising:\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing. 2. Semantic Chunking: Sentence-bou ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      }
+    ],
+    "sess_zmchg85r": [
+      {
+        "id": "msg_3667ea5e1e10",
+        "role": "user",
+        "content": "Summarize the document",
+        "timestamp": "2026-08-23T18:42:26.740Z"
+      },
+      {
+        "id": "msg_b747c67f32b1",
+        "role": "assistant",
+        "content": "**LibrAI Technical Reference & Architecture Manual**\n\n**Overview and Core Architecture**\n\nLibrAI is a high-performance AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. Its decoupled layered architecture consists of:\n\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing.\n2. Semantic Chunking: Sentence-boundary packaging with an 800-token target size and a 120-token sliding overlap window.\n3. Hybrid Retrieval: Combining BM25 keyword matching with dense vector similarity and Reciprocal Rank Fusion (RRF).\n4. Redis Caching & Rate Limiting: Utilizing sliding-window rate limiters, multi-turn conversation session stores with configurable TTL, and normalized query response caching.\n\n**Retrieval Strategies and Context Management**\n\nTo prevent context overflow and model hallucination:\n\n* Only top-k highest scoring passages (default: 4 chunks) are passed to the LLM system prompt.\n* Conversation history is trimmed dynamically to maintain strict adherence to model context limits (max 1,200 history tokens).\n* The prompt enforces strict negative grounding: if a user's question cannot be completely answered by the context, the model explicitly refuses to speculate.\n\n**Evidence Mode & Grounding Verification**\n\nLibrAI's unique \"Evidence Mode\" feature provides:\n\n* Exact character excerpt extraction and chunk citations.\n* Automated confidence score calculated from BM25 and semantic similarity weights.\n* Grounding status classification: 'supported' (confidence >= 0.45), 'insufficient' (low confidence or missing evidence), or 'unsupported' (irrelevant query).\n\n**Performance Benchmarks and Scalability**\n\nUnder typical production loads:\n\n* Cache hits return in under 15ms with the header \"cached: true\".\n* Chunking processes 100 pages of text in under 450ms.\n* Hybrid BM25 lookup evaluates across 10,000 chunks in sub-8ms latency.\n* Supported file types include PDF, TXT, and Markdown files up to 10MB in size.",
+        "timestamp": "2026-08-23T18:42:26.741Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... es, assessment tools, and enterprise document intelligence. The system features a decoupled layered architecture comprising:\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing. 2. Semantic Chunking: Sentence-bou ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      }
+    ],
+    "sess_git08w8w": [
+      {
+        "id": "msg_b231384d57e4",
+        "role": "user",
+        "content": "Summarize the document",
+        "timestamp": "2026-08-23T18:49:04.188Z"
+      },
+      {
+        "id": "msg_68f522a92dc4",
+        "role": "assistant",
+        "content": "**LibrAI Technical Reference & Architecture Manual**\n\n**Overview and Core Architecture**\n\nLibrAI is a high-performance AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. Its decoupled layered architecture consists of:\n\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing.\n2. Semantic Chunking: Sentence-boundary packaging with an 800-token target size and a 120-token sliding overlap window.\n3. Hybrid Retrieval: Combining BM25 keyword matching with dense vector similarity and Reciprocal Rank Fusion (RRF).\n4. Redis Caching & Rate Limiting: Utilizing sliding-window rate limiters, multi-turn conversation session stores with configurable TTL, and normalized query response caching.\n\n**Retrieval Strategies and Context Management**\n\nTo prevent context overflow and model hallucination:\n\n* Only top-k highest scoring passages (default: 4 chunks) are passed to the LLM system prompt.\n* Conversation history is trimmed dynamically to maintain strict adherence to model context limits (max 1,200 history tokens).\n* The prompt enforces strict negative grounding: if a user's question cannot be completely answered by the context, the model explicitly refuses to speculate.\n\n**Evidence Mode & Grounding Verification**\n\nLibrAI's unique \"Evidence Mode\" feature provides:\n\n* Exact character excerpt extraction and chunk citations.\n* Automated confidence score calculated from BM25 and semantic similarity weights.\n* Grounding status classification: 'supported' (confidence >= 0.45), 'insufficient' (low confidence or missing evidence), or 'unsupported' (irrelevant query).\n\n**Performance Benchmarks and Scalability**\n\nUnder typical production loads:\n\n* Cache hits return in under 15ms with the header \"cached: true\".\n* Chunking processes 100 pages of text in under 450ms.\n* Hybrid BM25 lookup evaluates across 10,000 chunks in sub-8ms latency.\n* Supported file types include PDF, TXT, and Markdown files up to 10MB in size.",
+        "timestamp": "2026-08-23T18:49:04.188Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... es, assessment tools, and enterprise document intelligence. The system features a decoupled layered architecture comprising:\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing. 2. Semantic Chunking: Sentence-bou ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 3
+      }
+    ],
+    "sess_2gpujcb3": [
+      {
+        "id": "msg_03280295eb54",
+        "role": "user",
+        "content": "Summarize the document",
+        "timestamp": "2026-08-23T18:54:38.491Z"
+      },
+      {
+        "id": "msg_ac5e758a4445",
+        "role": "assistant",
+        "content": "I apologize, but I can't find any information on the document you're referring to.",
+        "timestamp": "2026-08-23T18:54:38.491Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_75c0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0,
+            "excerpt": "%PDF-1.5\n%����\n%PDF-1.5\n%����\n1 0 obj\n<</ColorSpace/DeviceRGB/Subtype/Image/Height 3745/Filter/DCTDecode/Type/XObject/Width 2794/BitsPerComponent 8/Length 668848>>stream\n����\u0000XExif\u0000\u0000II*\u0000\b\u0000\u0000\u0000\u0004\u0000\u0000\u0001\u0004\u0000\u0001\u0000\u0000\u0000�\n\u0000\u0000\u0001\u0001\u0004\u0000\u0001\u0000\u0000\u0000�\u000e\u0000\u0000i�\u0004\u0000\u0001\u0000\u0000\u0000>\u0000\u0000\u0000\u0012\u0001\u0003\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\b�\u0004\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+          },
+          {
+            "chunkId": "chk_doc_75c0_1",
+            "pageNumber": 1,
+            "chunkIndex": 1,
+            "relevanceScore": 0,
+            "excerpt": "\u000e\f\u000e\n\u0013\u0011\u0010\u0010\u0011\u0013\u001c\u0014\u0016\u0014\u0016\u0014\u001c+\u001b\u001f\u001b\u001b\u001f\u001b+&.%#%.&D5//5DNB>BN_UU_wqw�����\u0000\u0011\b\u000e�\n�\u0003\u0001\"\u0000\u0002\u0011\u0001\u0003\u0011\u0001��\u0000�\u0000\u0001\u0000\u0003\u0001\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0007\b\u0006\u0005\u0004\u0003\u0002\u0010\u0000\u0002\u0001\u0003\u0002\u0004\u0004\u0004\u0002\u0006\u0005\u0006 \u0007\u0001\u0019\u0000\u0001\u0002\u0003\u0004\u0011\u0005\u0006\u0007\u0012!1\u0013AQa\u0014\"q�2�\u0015#BR��\u0016br��$36u��\u0017C�������%&4FScs��DT��5EUdet����7'V���G��\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0003\u0004\u0005\u0011\u0001\u0001\u0000\u0001\u0003\u0003\u0002\u0005\u0003\u0003\u0003\u0004\u0003\u0001\u0000\u0003\u0000\u0001\u0011\u0002!1\u0012AQaq\u0003\"���2��B�"
+          },
+          {
+            "chunkId": "chk_doc_75c0_2",
+            "pageNumber": 1,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "\u0013G\u0015!l���%\u000f�t�#���N�y�����$���i�uc\u001f�\n���9y$Ϭ�m|\b��W�X>��x�|�>-��<i�m�\u0000vr\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004�\u0000(\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000e0BXϹ 1�&\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00009�~\\\u0000\u0000\u0000\u0004&�fI %�\u0012\u0000\u0000�}�\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000����\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0005����\u0000\u0000\u0000\u0000��2@\u0000\u0000\u0000\u0000\u0000\u0000\f�͗�c=\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+          },
+          {
+            "chunkId": "chk_doc_75c0_3",
+            "pageNumber": 1,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�H\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0019I���� \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000/��FI��\u001eȟ\n�\nl�\\�N��b<�y�@\u0007T\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012K�\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u000b8�ܐ\u0001V�����@\u0000�\u001d�\u0000\b\u0000\u0000\u0000\u0000\u0000 �\u0003+�(\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\f\u0000\u0000"
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "insufficient",
+        "confidenceScore": 0,
+        "latencyMs": 143025
+      }
+    ],
+    "sess_u1fltuwh": [
+      {
+        "id": "msg_cdb8fc18c4f8",
+        "role": "user",
+        "content": "Summarize the document",
+        "timestamp": "2026-08-23T18:59:31.457Z"
+      },
+      {
+        "id": "msg_8563e4c2218d",
+        "role": "assistant",
+        "content": "I apologize, but I can't find any information on the document you're referring to.",
+        "timestamp": "2026-08-23T18:59:31.457Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_75c0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0,
+            "excerpt": "%PDF-1.5\n%����\n%PDF-1.5\n%����\n1 0 obj\n<</ColorSpace/DeviceRGB/Subtype/Image/Height 3745/Filter/DCTDecode/Type/XObject/Width 2794/BitsPerComponent 8/Length 668848>>stream\n����\u0000XExif\u0000\u0000II*\u0000\b\u0000\u0000\u0000\u0004\u0000\u0000\u0001\u0004\u0000\u0001\u0000\u0000\u0000�\n\u0000\u0000\u0001\u0001\u0004\u0000\u0001\u0000\u0000\u0000�\u000e\u0000\u0000i�\u0004\u0000\u0001\u0000\u0000\u0000>\u0000\u0000\u0000\u0012\u0001\u0003\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\b�\u0004\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+          },
+          {
+            "chunkId": "chk_doc_75c0_1",
+            "pageNumber": 1,
+            "chunkIndex": 1,
+            "relevanceScore": 0,
+            "excerpt": "\u000e\f\u000e\n\u0013\u0011\u0010\u0010\u0011\u0013\u001c\u0014\u0016\u0014\u0016\u0014\u001c+\u001b\u001f\u001b\u001b\u001f\u001b+&.%#%.&D5//5DNB>BN_UU_wqw�����\u0000\u0011\b\u000e�\n�\u0003\u0001\"\u0000\u0002\u0011\u0001\u0003\u0011\u0001��\u0000�\u0000\u0001\u0000\u0003\u0001\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0007\b\u0006\u0005\u0004\u0003\u0002\u0010\u0000\u0002\u0001\u0003\u0002\u0004\u0004\u0004\u0002\u0006\u0005\u0006 \u0007\u0001\u0019\u0000\u0001\u0002\u0003\u0004\u0011\u0005\u0006\u0007\u0012!1\u0013AQa\u0014\"q�2�\u0015#BR��\u0016br��$36u��\u0017C�������%&4FScs��DT��5EUdet����7'V���G��\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0003\u0004\u0005\u0011\u0001\u0001\u0000\u0001\u0003\u0003\u0002\u0005\u0003\u0003\u0003\u0004\u0003\u0001\u0000\u0003\u0000\u0001\u0011\u0002!1\u0012AQaq\u0003\"���2��B�"
+          },
+          {
+            "chunkId": "chk_doc_75c0_2",
+            "pageNumber": 1,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "\u0013G\u0015!l���%\u000f�t�#���N�y�����$���i�uc\u001f�\n���9y$Ϭ�m|\b��W�X>��x�|�>-��<i�m�\u0000vr\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004�\u0000(\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000e0BXϹ 1�&\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00009�~\\\u0000\u0000\u0000\u0004&�fI %�\u0012\u0000\u0000�}�\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000����\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0005����\u0000\u0000\u0000\u0000��2@\u0000\u0000\u0000\u0000\u0000\u0000\f�͗�c=\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+          },
+          {
+            "chunkId": "chk_doc_75c0_3",
+            "pageNumber": 1,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�H\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0019I���� \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000/��FI��\u001eȟ\n�\nl�\\�N��b<�y�@\u0007T\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012K�\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u000b8�ܐ\u0001V�����@\u0000�\u001d�\u0000\b\u0000\u0000\u0000\u0000\u0000 �\u0003+�(\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\f\u0000\u0000"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "insufficient",
+        "confidenceScore": 0,
+        "latencyMs": 9
+      },
+      {
+        "id": "msg_181d77619218",
+        "role": "user",
+        "content": "Summarize the document",
+        "timestamp": "2026-08-23T19:00:36.706Z"
+      },
+      {
+        "id": "msg_ff6e3aef3829",
+        "role": "assistant",
+        "content": "The uploaded document does not contain sufficient information to answer this question.",
+        "timestamp": "2026-08-23T19:00:36.706Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_e72d_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0,
+            "excerpt": "-- 1 of 1 --"
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "insufficient",
+        "confidenceScore": 0,
+        "latencyMs": 32397
+      },
+      {
+        "id": "msg_5031bd268c50",
+        "role": "user",
+        "content": "Summarize the document",
+        "timestamp": "2026-08-23T19:07:40.804Z"
+      },
+      {
+        "id": "msg_45294f6b9241",
+        "role": "assistant",
+        "content": "**Course Overview**\n\nThe document appears to be a course syllabus for a Computer Oriented Numerical Analysis course, denoted as DSC307, at the undergraduate level.\n\n**Course Objectives**\n\nThe course aims to cover the theory and application of numerical approximation techniques, including numerical error, root-finding, interpolation, and polynomial approximation.\n\n**Course Structure**\n\nThe course is divided into six modules:\n\n1. Introduction to Numerical Analysis\n2. Solution of Linear Algebraic Equations\n3. Numerical Differentiation and Integration\n4. Numerical Solution of Ordinary Differential Equations\n5. Interpolation and Curve Fitting\n6. Applications of Numerical Methods\n\n**Assessment Scheme**\n\nThe course assessment is divided into two parts:\n\n1. Theory and Examination (75%)\n2. Lab/Practical/Studio Assessment (25%)\n\n**Textbooks and References**\n\nThe recommended textbooks for the course are:\n\n1. Mollah S. A., Numerical Analysis and Computational Procedures\n2. Sastry S. S., Introductory Methods of Numerical Analysis\n3. Jain M. K., Iyengar S. R. K., Jain R. K., Numerical Methods: For Scientific and Engineering Computation\n\n**Additional Resources**\n\nThe course also includes references to other textbooks and authors, including Rajaraman V, Krishnamurthy, E.V., Sen, S.K, and Stoer, Bullrich.",
+        "timestamp": "2026-08-23T19:07:40.805Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_9388_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6162,
+            "excerpt": "... d 4th Order)\nStudent Learning Outcomes:\nAfter completion of the course,the student will be able to:\nExplain concept of various numerical methods, in particular, with reference to numerical solution of non linear equations and system\nof linear equations, interp ..."
+          },
+          {
+            "chunkId": "chk_doc_9388_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.3914,
+            "excerpt": "... : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differenti ..."
+          },
+          {
+            "chunkId": "chk_doc_9388_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "PSDA:\n• Applications of Numerical Methods in various domains\n• Numerical problems on Interpolation\n• Numerical problems on Numerical Integration and Differentiation, Ordinary Differential Equations\n• Numerical problems on solution of algebraic and transcendent"
+          },
+          {
+            "chunkId": "chk_doc_9388_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Assessment/ Examination Scheme:\nTheory L/T (%) Lab/Practical/Studio (%) Total\n75% 25% 100%\nContinuous Assessment/Internal Assessment End Term Examination\nComponents (Drop down) Mid Term Exam Home Assignment Presentation/Viva Attendance\nWeightage (%)\n20% 20% 5%"
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.6162,
+        "latencyMs": 163795
+      }
+    ],
+    "write-test-0": [],
+    "write-test-1": [],
+    "write-test-2": [],
+    "write-test-3": [],
+    "write-test-4": [],
+    "write-test-5": [],
+    "write-test-6": [],
+    "write-test-7": [],
+    "write-test-8": [],
+    "write-test-9": [],
+    "write-test-10": [],
+    "write-test-11": [],
+    "write-test-12": [],
+    "write-test-13": [],
+    "write-test-14": [],
+    "write-test-15": [],
+    "write-test-16": [],
+    "write-test-17": [],
+    "write-test-18": [],
+    "write-test-19": [],
+    "write-test-20": [],
+    "write-test-21": [],
+    "write-test-22": [],
+    "write-test-23": [],
+    "write-test-24": [],
+    "write-test-25": [],
+    "write-test-26": [],
+    "write-test-27": [],
+    "write-test-28": [],
+    "write-test-29": [],
+    "write-test-30": [],
+    "write-test-31": [],
+    "write-test-32": [],
+    "write-test-33": [],
+    "write-test-34": [],
+    "write-test-35": [],
+    "write-test-36": [],
+    "write-test-37": [],
+    "write-test-38": [],
+    "write-test-39": [],
+    "sess_i0mfyzno": [
+      {
+        "id": "msg_f3de74b35878",
+        "role": "user",
+        "content": "Summarize the document",
+        "timestamp": "2026-08-23T19:12:03.645Z"
+      },
+      {
+        "id": "msg_ed45862278b8",
+        "role": "assistant",
+        "content": "**Course Overview**\n\nThe document appears to be a course syllabus for a Computer Oriented Numerical Analysis course, denoted as DSC307, at the undergraduate level.\n\n**Course Objectives**\n\nThe course aims to cover the theory and application of numerical approximation techniques, including numerical error, root-finding, interpolation, and polynomial approximation.\n\n**Course Structure**\n\nThe course is divided into six modules:\n\n1. Introduction to Numerical Analysis\n2. Solution of Linear Algebraic Equations\n3. Numerical Differentiation and Integration\n4. Numerical Solution of Ordinary Differential Equations\n5. Interpolation and Curve Fitting\n6. Applications of Numerical Methods\n\n**Assessment Scheme**\n\nThe course assessment is divided into two parts:\n\n1. Theory and Examination (75%)\n2. Lab/Practical/Studio Assessment (25%)\n\n**Textbooks and References**\n\nThe recommended textbooks for the course are:\n\n1. Mollah S. A., Numerical Analysis and Computational Procedures\n2. Sastry S. S., Introductory Methods of Numerical Analysis\n3. Jain M. K., Iyengar S. R. K., Jain R. K., Numerical Methods: For Scientific and Engineering Computation\n\n**Additional Resources**\n\nThe course also includes references to other textbooks and authors, including Rajaraman V, Krishnamurthy, E.V., Sen, S.K, and Stoer, Bullrich.",
+        "timestamp": "2026-08-23T19:12:03.646Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_9388_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6162,
+            "excerpt": "... d 4th Order)\nStudent Learning Outcomes:\nAfter completion of the course,the student will be able to:\nExplain concept of various numerical methods, in particular, with reference to numerical solution of non linear equations and system\nof linear equations, interp ..."
+          },
+          {
+            "chunkId": "chk_doc_9388_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.3914,
+            "excerpt": "... : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differenti ..."
+          },
+          {
+            "chunkId": "chk_doc_9388_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "PSDA:\n• Applications of Numerical Methods in various domains\n• Numerical problems on Interpolation\n• Numerical problems on Numerical Integration and Differentiation, Ordinary Differential Equations\n• Numerical problems on solution of algebraic and transcendent"
+          },
+          {
+            "chunkId": "chk_doc_9388_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Assessment/ Examination Scheme:\nTheory L/T (%) Lab/Practical/Studio (%) Total\n75% 25% 100%\nContinuous Assessment/Internal Assessment End Term Examination\nComponents (Drop down) Mid Term Exam Home Assignment Presentation/Viva Attendance\nWeightage (%)\n20% 20% 5%"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.6162,
+        "latencyMs": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "LibrAI - AI Document Assistant",
+  "description": "Production-grade AI document assistant with PDF/TXT processing, hybrid BM25 + semantic vector retrieval, multi-turn session management, Redis caching and rate limiting, and Evidence Mode citation grounding.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
