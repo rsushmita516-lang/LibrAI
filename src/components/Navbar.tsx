@@ -1,13 +1,13 @@
 import React from "react";
-import { BookOpen, Server, Zap, Database, Terminal, ShieldCheck } from "lucide-react";
+import { BookOpen, Server, Zap, Database } from "lucide-react";
 import { DocumentRecord, SystemStatus } from "../types";
 
 interface NavbarProps {
   documents: DocumentRecord[];
   activeDoc: DocumentRecord | null;
   onSelectDoc: (doc: DocumentRecord) => void;
-  activeTab: "chat" | "chunks" | "api" | "system";
-  setActiveTab: (tab: "chat" | "chunks" | "api" | "system") => void;
+  activeTab: "chat" | "chunks" | "system";
+  setActiveTab: (tab: "chat" | "chunks" | "system") => void;
   systemStatus: SystemStatus | null;
   rateLimitInfo: { limit: number; remaining: number; reset: number } | null;
 }
@@ -92,19 +92,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <Database className="w-3.5 h-3.5" />
               <span>Chunks ({activeDoc?.chunkCount || 0})</span>
-            </button>
-
-            <button
-              id="tab-api"
-              onClick={() => setActiveTab("api")}
-              className={`flex items-center space-x-1.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
-                activeTab === "api"
-                  ? "bg-slate-900 text-white"
-                  : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
-              }`}
-            >
-              <Terminal className="w-3.5 h-3.5" />
-              <span>API & Postman</span>
             </button>
 
             <button

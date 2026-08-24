@@ -4,14 +4,13 @@ import { DocumentUpload } from "./components/DocumentUpload";
 import { DocumentViewer } from "./components/DocumentViewer";
 import { ChatInterface } from "./components/ChatInterface";
 import { CitationModal } from "./components/CitationModal";
-import { ApiPlayground } from "./components/ApiPlayground";
 import { SystemDiagnostics } from "./components/SystemDiagnostics";
 import { DocumentRecord, Citation, SystemStatus } from "./types";
 
 export default function App() {
   const [documents, setDocuments] = useState<DocumentRecord[]>([]);
   const [activeDoc, setActiveDoc] = useState<DocumentRecord | null>(null);
-  const [activeTab, setActiveTab] = useState<"chat" | "chunks" | "api" | "system">("chat");
+  const [activeTab, setActiveTab] = useState<"chat" | "chunks" | "system">("chat");
   const [sessionId, setSessionId] = useState<string>(() => `sess_${Math.random().toString(36).slice(2, 10)}`);
   const [activeCitation, setActiveCitation] = useState<Citation | null>(null);
   const [systemStatus, setSystemStatus] = useState<SystemStatus | null>(null);
@@ -115,12 +114,6 @@ export default function App() {
         {activeTab === "chunks" && (
           <div className="max-w-5xl mx-auto">
             <DocumentViewer activeDoc={activeDoc} />
-          </div>
-        )}
-
-        {activeTab === "api" && (
-          <div className="max-w-5xl mx-auto">
-            <ApiPlayground activeDoc={activeDoc} sessionId={sessionId} />
           </div>
         )}
 

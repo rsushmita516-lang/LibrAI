@@ -14,6 +14,21 @@
       "pageCount": 4,
       "totalTokens": 1194,
       "summary": "Course Name: COMPUTER ORIENTED NUMERICAL ANALYSIS\nCourse Level : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques.\nTopics included are numerical error, root-finding, interpolation and polynomial approximatio..."
+    },
+    "doc_sample_librai_manual": {
+      "id": "doc_sample_librai_manual",
+      "filename": "LibrAI_Architecture_Manual.md",
+      "originalName": "LibrAI_Architecture_Manual.md",
+      "mimeType": "text/markdown",
+      "sizeBytes": 2215,
+      "checksum": "cecd9286ef0d30be8dbe63dc348bd8f9f00d7c1964f2e772289493be10679d26",
+      "status": "ready",
+      "pageCount": 4,
+      "totalTokens": 554,
+      "chunkCount": 1,
+      "createdAt": "2026-08-24T17:38:43.287Z",
+      "updatedAt": "2026-08-24T17:38:43.287Z",
+      "summary": "Comprehensive architectural and operational manual for the LibrAI Document Assistant system."
     }
   },
   "chunks": {
@@ -124,6 +139,35 @@
           "continuous",
           "internal",
           "end"
+        ]
+      }
+    ],
+    "doc_sample_librai_manual": [
+      {
+        "id": "chk_doc_samp_0",
+        "documentId": "doc_sample_librai_manual",
+        "chunkIndex": 0,
+        "text": "# LibrAI Technical Reference & Architecture Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architecture comprising:\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing. 2. Semantic Chunking: Sentence-boundary packaging with an 800-token target size and a 120-token sliding overlap window to guarantee conversational context continuity. 3. Hybrid Retrieval: Combining BM25 keyword matching with dense vector similarity and Reciprocal Rank Fusion (RRF). 4. Redis Caching & Rate Limiting: Utilizing sliding-window rate limiters, multi-turn conversation session stores with configurable TTL, and normalized query response caching. ## Section 2: Retrieval Strategies and Context Management\nTo prevent context overflow and reduce model hallucination:\n- Only the top-k highest scoring passages (default: 4 chunks) are passed to the LLM system prompt.\n- Conversation history is trimmed dynamically to maintain strict adherence to model context limits (max 1,200 history tokens).\n- The prompt enforces strict negative grounding: if a user's question cannot be completely answered by the context, the model explicitly refuses to speculate and returns an unavailable status. ## Section 3: Evidence Mode & Grounding Verification\nLibrAI's unique \"Evidence Mode\" original feature provides:\n- Exact character excerpt extraction and chunk citations (e.g. [Page 1, Chunk 2]).\n- An automated confidence score calculated from BM25 and semantic similarity weights.\n- Grounding status classification: 'supported' (confidence >= 0.45), 'insufficient' (low confidence or missing evidence), or 'unsupported' (irrelevant query). ## Section 4: Performance Benchmarks and Scalability\nUnder typical production loads:\n- Cache hits return in under 15ms with the header \"cached: true\".\n- Chunking processes 100 pages of text in under 450ms.\n- Hybrid BM25 lookup evaluates across 10,000 chunks in sub-8ms latency.\n- Supported file types include PDF, TXT, and Markdown files up to 10MB in size.",
+        "pageNumber": 1,
+        "startChar": 0,
+        "endChar": 2211,
+        "tokenCount": 553,
+        "keywords": [
+          "context",
+          "section",
+          "librai",
+          "architecture",
+          "bm25",
+          "model",
+          "grounding",
+          "evidence",
+          "confidence",
+          "document",
+          "system",
+          "pdf",
+          "txt",
+          "page",
+          "semantic"
         ]
       }
     ]
@@ -688,6 +732,102 @@
         "evidenceStatus": "supported",
         "confidenceScore": 0.6162,
         "latencyMs": 3
+      }
+    ],
+    "sess_lrrv6dcm": [
+      {
+        "id": "msg_04e939d87a67",
+        "role": "user",
+        "content": "What is the chunking strategy in LibrAI?",
+        "timestamp": "2026-08-24T14:53:58.829Z"
+      },
+      {
+        "id": "msg_6a6ecb128a6a",
+        "role": "assistant",
+        "content": "**Chunking Strategy in LibrAI**\n\nIn LibrAI, the **chunking strategy** involves dividing the provided document excerpts into smaller, manageable chunks to extract relevant information and answer user queries accurately.\n\n**Key Chunking Principles:**\n\n1.  **Passage-based chunking**: The document is divided into individual passages, each containing a specific chunk of text.\n2.  **Chunk identification**: Each passage is analyzed to identify relevant chunks, such as sentences, paragraphs, or specific sections.\n3.  **Contextual chunking**: The chunks are then analyzed in context to understand their relationships and relevance to the user's query.\n\n**Benefits of Chunking Strategy:**\n\n1.  **Improved accuracy**: By focusing on specific chunks of text, LibrAI can provide more accurate and relevant answers to user queries.\n2.  **Enhanced readability**: The chunking strategy makes it easier to read and understand the extracted information, reducing the complexity of the original text.\n3.  **Increased efficiency**: By breaking down the document into smaller chunks, LibrAI can process and analyze the text more efficiently, leading to faster response times.\n\n**Chunking Notation:**\n\nThe chunking strategy in LibrAI uses the following notation to reference specific chunks of text:\n\n*   \\[Passage X, Chunk Y]: References a specific passage and chunk within that passage.\n*   \\[Page X, Chunk Z]: References a specific page and chunk within that page.\n*   \\[Passage N]: References a specific passage without specifying a chunk.\n\nBy using this chunking strategy, LibrAI can provide accurate and relevant answers to user queries while maintaining a clear and organized structure.",
+        "timestamp": "2026-08-24T14:53:58.829Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_9388_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.7552,
+            "excerpt": "... d 4th Order)\nStudent Learning Outcomes:\nAfter completion of the course,the student will be able to:\nExplain concept of various numerical methods, in particular, with reference to numerical solution of non linear equations and system\nof linear equations, interp ..."
+          },
+          {
+            "chunkId": "chk_doc_9388_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.3914,
+            "excerpt": "... : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differenti ..."
+          },
+          {
+            "chunkId": "chk_doc_9388_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0.1061,
+            "excerpt": "PSDA:\n• Applications of Numerical Methods in various domains\n• Numerical problems on Interpolation\n• Numerical problems on Numerical Integration and Differentiation, Ordinary Differential Equations\n• Numerical problems on solution of algebrai ..."
+          },
+          {
+            "chunkId": "chk_doc_9388_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Assessment/ Examination Scheme:\nTheory L/T (%) Lab/Practical/Studio (%) Total\n75% 25% 100%\nContinuous Assessment/Internal Assessment End Term Examination\nComponents (Drop down) Mid Term Exam Home Assignment Presentation/Viva Attendance\nWeightage (%)\n20% 20% 5%"
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.7552,
+        "latencyMs": 199369
+      }
+    ],
+    "sess_jgxcfocy": [
+      {
+        "id": "msg_1665ef74656d",
+        "role": "user",
+        "content": "Why is that specific overlap window used?",
+        "timestamp": "2026-08-24T14:57:51.810Z"
+      },
+      {
+        "id": "msg_c850fac7524e",
+        "role": "assistant",
+        "content": "The uploaded document does not contain sufficient information to answer this question.",
+        "timestamp": "2026-08-24T14:57:51.812Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_9388_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0,
+            "excerpt": "Course Name: COMPUTER ORIENTED NUMERICAL ANALYSIS\nCourse Level : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, i"
+          },
+          {
+            "chunkId": "chk_doc_9388_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation and Curve Fitting\n20 Types of Operators,"
+          },
+          {
+            "chunkId": "chk_doc_9388_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "PSDA:\n• Applications of Numerical Methods in various domains\n• Numerical problems on Interpolation\n• Numerical problems on Numerical Integration and Differentiation, Ordinary Differential Equations\n• Numerical problems on solution of algebraic and transcendent"
+          },
+          {
+            "chunkId": "chk_doc_9388_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Assessment/ Examination Scheme:\nTheory L/T (%) Lab/Practical/Studio (%) Total\n75% 25% 100%\nContinuous Assessment/Internal Assessment End Term Examination\nComponents (Drop down) Mid Term Exam Home Assignment Presentation/Viva Attendance\nWeightage (%)\n20% 20% 5%"
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "insufficient",
+        "confidenceScore": 0,
+        "latencyMs": 52086
       }
     ]
   }
