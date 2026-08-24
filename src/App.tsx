@@ -42,11 +42,9 @@ export default function App() {
   };
 
   useEffect(() => {
-    fetchDocuments();
     fetchSystemStatus();
 
-    // Auto-create sample document on first launch if empty
-    const ensureSampleDoc = async () => {
+    const loadDocuments = async () => {
       try {
         const res = await fetch("/api/documents");
         const data = await res.json();
@@ -57,13 +55,16 @@ export default function App() {
             setDocuments([sampleData.document]);
             setActiveDoc(sampleData.document);
           }
+        } else {
+          setDocuments(data.documents);
+          setActiveDoc((current) => current || data.documents[0]);
         }
       } catch (e) {
-        console.warn("Initial sample load notice:", e);
+        console.warn("Error loading documents:", e);
       }
     };
 
-    ensureSampleDoc();
+    loadDocuments();
   }, []);
 
   const handleResetSession = () => {

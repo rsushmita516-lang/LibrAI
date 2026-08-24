@@ -26,13 +26,10 @@ async function startServer() {
     next();
   });
 
-  // Apply Redis-backed sliding window rate limiter to API routes
-  app.use("/api", rateLimiterMiddleware());
-
   // Mount API routers
   app.use("/api/documents", documentsRouter);
-  app.use("/api/chat", chatRouter);
-  app.use("/api", chatRouter);
+  app.use("/api/chat", rateLimiterMiddleware(), chatRouter);
+  app.use("/api", rateLimiterMiddleware(), chatRouter);
   app.use("/api", systemRouter);
 
   // Top-level aliases for direct assignment contract (e.g. POST /chat, GET /health)
