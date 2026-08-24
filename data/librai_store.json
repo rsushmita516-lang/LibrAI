@@ -881,6 +881,264 @@
         "confidenceScore": 0,
         "latencyMs": 84379
       }
+    ],
+    "sess_qw0set2c": [
+      {
+        "id": "msg_018ce3bfc2d5",
+        "role": "user",
+        "content": "What is the target chunk size and overlap used in LibrAI's chunking strategy?",
+        "timestamp": "2026-08-24T18:49:31.804Z"
+      },
+      {
+        "id": "msg_7e4130c10c55",
+        "role": "assistant",
+        "content": "**Chunking Strategy Details**\n\nAccording to the provided context excerpts, the target chunk size for LibrAI's semantic chunking is **800 tokens**.\n\nAdditionally, the system employs a sliding overlap window to ensure conversational context continuity. The overlap size is **120 tokens**.\n\nThese chunking parameters are designed to balance the trade-off between capturing relevant context and preventing context overflow or model hallucination.",
+        "timestamp": "2026-08-24T18:49:31.804Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architectu ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 14839
+      },
+      {
+        "id": "msg_8a6804feeb16",
+        "role": "user",
+        "content": "summarize the doc",
+        "timestamp": "2026-08-24T18:52:18.487Z"
+      },
+      {
+        "id": "msg_c4e9f25a8d4e",
+        "role": "assistant",
+        "content": "**LibrAI Technical Reference & Architecture Manual**\n\n**Overview**\n\nLibrAI is a high-performance AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence.\n\n**Key Components**\n\n1. **Ingestion Pipeline**: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing.\n2. **Semantic Chunking**: Sentence-boundary packaging with a target size of 800 tokens and a sliding overlap window of 120 tokens.\n3. **Hybrid Retrieval**: Combining BM25 keyword matching with dense vector similarity and Reciprocal Rank Fusion (RRF).\n4. **Redis Caching & Rate Limiting**: Utilizing sliding-window rate limiters, multi-turn conversation session stores with configurable TTL, and normalized query response caching.\n\n**Context Management**\n\nTo prevent context overflow and model hallucination:\n\n* Only top-k highest scoring passages (default: 4 chunks) are passed to the LLM system prompt.\n* Conversation history is trimmed dynamically to maintain strict adherence to model context limits (max 1,200 history tokens).\n* The prompt enforces strict negative grounding: if a user's question cannot be completely answered by the context, the model explicitly refuses to speculate and returns an unavailable status.\n\n**Evidence Mode & Grounding Verification**\n\nLibrAI's unique \"Evidence Mode\" provides:\n\n* Exact character excerpt extraction and chunk citations.\n* Automated confidence score calculated from BM25 and semantic similarity weights.\n* Grounding status classification: 'supported' (confidence >= 0.45), 'insufficient' (low confidence or missing evidence), or 'unsupported' (irrelevant query).\n\n**Performance Benchmarks and Scalability**\n\nUnder typical production loads:\n\n* Cache hits return in under 15ms with the header \"cached: true\".\n* Chunking processes 100 pages of text in under 450ms.\n* Hybrid BM25 lookup evaluates across 10,000 chunks in sub-8ms latency.\n* Supported file types include PDF, TXT, and Markdown files up to 10MB in size.",
+        "timestamp": "2026-08-24T18:52:18.488Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.5923,
+            "excerpt": "... es, assessment tools, and enterprise document intelligence. The system features a decoupled layered architecture comprising:\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing. 2. Semantic Chunking: Sentence-bou ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.5923,
+        "latencyMs": 116308
+      },
+      {
+        "id": "msg_c71113723200",
+        "role": "user",
+        "content": "what is Redis Caching & Rate Limiting",
+        "timestamp": "2026-08-24T18:54:46.767Z"
+      },
+      {
+        "id": "msg_d2444ee184df",
+        "role": "assistant",
+        "content": "**Redis Caching & Rate Limiting**\n\nAccording to the provided context excerpts, LibrAI employs Redis Caching & Rate Limiting to optimize performance and prevent abuse.\n\n**Redis Caching**\n\n* **Normalized Query Response Caching**: LibrAI uses Redis caching to store query responses, allowing for faster retrieval and reducing the load on the system.\n* **Sliding-Window Cache**: The cache has a sliding window, which means that it stores a fixed-size window of recent query responses. This helps to prevent cache thrashing and ensures that the most frequently accessed responses are stored.\n\n**Rate Limiting**\n\n* **Sliding-Window Rate Limiters**: LibrAI uses sliding-window rate limiters to control the rate at which requests are made to the system.\n* **Multi-Turn Conversation Session Stores**: The system stores conversation history in a multi-turn session store, which is configured with a Time-To-Live (TTL) value. This helps to prevent abuse by limiting the amount of time that a user can make requests without being blocked.\n* **Rate Limiting Headers**: The system returns a \"cached: true\" header when a cache hit occurs, indicating that the response was retrieved from the cache.\n\n**Benefits**\n\nThe use of Redis Caching & Rate Limiting provides several benefits, including:\n\n* Improved performance: By reducing the load on the system and storing frequently accessed responses in the cache, LibrAI can respond faster to user requests.\n* Preventing abuse: The sliding-window rate limiters and multi-turn conversation session stores help to prevent abuse by limiting the rate at which requests can be made and storing conversation history to prevent replay attacks.",
+        "timestamp": "2026-08-24T18:54:46.767Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architectu ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 107594
+      },
+      {
+        "id": "msg_296d3682376d",
+        "role": "user",
+        "content": "what are the benefits",
+        "timestamp": "2026-08-24T18:56:59.630Z"
+      },
+      {
+        "id": "msg_b53466601ac6",
+        "role": "assistant",
+        "content": "**Benefits of Redis Caching & Rate Limiting in LibrAI**\n\nAccording to the provided context excerpts, the benefits of Redis Caching & Rate Limiting in LibrAI include:\n\n### **Improved Performance**\n\n* **Faster Response Times**: By storing frequently accessed responses in the cache, LibrAI can respond faster to user requests, reducing latency and improving overall performance.\n* **Reduced Load on System**: Redis caching helps to reduce the load on the system, allowing it to handle more requests and improving overall scalability.\n\n### **Prevention of Abuse**\n\n* **Rate Limiting**: The sliding-window rate limiters help to prevent abuse by limiting the rate at which requests can be made, preventing spam and abuse.\n* **Prevention of Replay Attacks**: The multi-turn conversation session stores help to prevent replay attacks by storing conversation history, making it difficult for attackers to reuse previous requests.\n\n### **Security**\n\n* **Prevention of Cache Thrashing**: The sliding-window cache helps to prevent cache thrashing, which can occur when the cache is constantly being updated and replaced.\n* **Protection against Abuse**: The rate limiting mechanisms help to protect the system against abuse, preventing malicious actors from overwhelming the system with requests.\n\n### **Scalability**\n\n* **Improved Scalability**: The use of Redis caching and rate limiting helps to improve the system's scalability, allowing it to handle more requests and scale more easily.\n* **Reduced Resource Utilization**: By reducing the load on the system and preventing abuse, Redis caching and rate limiting help to reduce resource utilization, making the system more efficient and cost-effective.",
+        "timestamp": "2026-08-24T18:56:59.631Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.88,
+            "excerpt": "... Only the top-k highest scoring passages (default: 4 chunks) are passed to the LLM system prompt.\n- Conversation history is trimmed dynamically to maintain strict adherence to model context limits (max 1,200 history tokens).\n- The prompt enforces strict negativ ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.88,
+        "latencyMs": 111399
+      }
+    ],
+    "sess_xe7tkqi9": [
+      {
+        "id": "msg_8fa45a5547d6",
+        "role": "user",
+        "content": "What is the target chunk size and overlap used in LibrAI's chunking strategy?",
+        "timestamp": "2026-08-24T19:02:21.968Z"
+      },
+      {
+        "id": "msg_5c5fa11535ff",
+        "role": "assistant",
+        "content": "**Chunking Strategy Details**\n\nAccording to the provided context excerpts, the target chunk size for LibrAI's semantic chunking is **800 tokens**.\n\nAdditionally, the system employs a sliding overlap window to ensure conversational context continuity. The overlap size is **120 tokens**.\n\nThese chunking parameters are designed to balance the trade-off between capturing relevant context and preventing context overflow or model hallucination.",
+        "timestamp": "2026-08-24T19:02:21.968Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architectu ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      }
+    ],
+    "sess_7mbnwccp": [
+      {
+        "id": "msg_2500bcca31f1",
+        "role": "user",
+        "content": "What is the target chunk size and overlap used in LibrAI's chunking strategy?",
+        "timestamp": "2026-08-24T19:02:29.178Z"
+      },
+      {
+        "id": "msg_db5797b3ffe0",
+        "role": "assistant",
+        "content": "**Chunking Strategy Details**\n\nAccording to the provided context excerpts, the target chunk size for LibrAI's semantic chunking is **800 tokens**.\n\nAdditionally, the system employs a sliding overlap window to ensure conversational context continuity. The overlap size is **120 tokens**.\n\nThese chunking parameters are designed to balance the trade-off between capturing relevant context and preventing context overflow or model hallucination.",
+        "timestamp": "2026-08-24T19:02:29.178Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architectu ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 1
+      }
+    ],
+    "sess_ngnnr7k4": [
+      {
+        "id": "msg_c4ad3bb2e4d0",
+        "role": "user",
+        "content": "What is the target chunk size and overlap used in LibrAI's chunking strategy?",
+        "timestamp": "2026-08-24T19:02:47.928Z"
+      },
+      {
+        "id": "msg_e5ef144d69db",
+        "role": "assistant",
+        "content": "**Chunking Strategy Details**\n\nAccording to the provided context excerpts, the target chunk size for LibrAI's semantic chunking is **800 tokens**.\n\nAdditionally, the system employs a sliding overlap window to ensure conversational context continuity. The overlap size is **120 tokens**.\n\nThese chunking parameters are designed to balance the trade-off between capturing relevant context and preventing context overflow or model hallucination.",
+        "timestamp": "2026-08-24T19:02:47.928Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architectu ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_5d318e425f9a",
+        "role": "user",
+        "content": "Give me summary",
+        "timestamp": "2026-08-24T19:02:59.621Z"
+      },
+      {
+        "id": "msg_7e34babe3925",
+        "role": "assistant",
+        "content": "**Overlap Window Summary**\n==========================\n\nThe overlap window of 120 tokens is used to ensure conversational context continuity. This design choice:\n\n*   Maintains context by capturing relevant information from the conversation history\n*   Prevents context overflow, reducing the risk of hallucination and inaccurate responses\n\nThe chosen window size balances context sensitivity and computational efficiency, enabling efficient processing and response to user queries while maintaining conversational continuity.\n\n**Source Chunk Reference**\n-------------------------\n\n[Page 1, Chunk 2]",
+        "timestamp": "2026-08-24T19:02:59.621Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0,
+            "excerpt": "# LibrAI Technical Reference & Architecture Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The sys"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "insufficient",
+        "confidenceScore": 0,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_2e9299744e7e",
+        "role": "user",
+        "content": "what is the name of doc",
+        "timestamp": "2026-08-24T19:04:26.201Z"
+      },
+      {
+        "id": "msg_d49fb356b1cd",
+        "role": "assistant",
+        "content": "The document name is not explicitly mentioned in the provided context excerpts.",
+        "timestamp": "2026-08-24T19:04:26.201Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architectu ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 67459
+      },
+      {
+        "id": "msg_8e07a395922d",
+        "role": "user",
+        "content": "what is this project about ?",
+        "timestamp": "2026-08-24T19:05:41.673Z"
+      },
+      {
+        "id": "msg_e8d80c829500",
+        "role": "assistant",
+        "content": "**Project Overview**\n=====================\n\nThe provided context excerpts suggest that this project is about developing a high-performance, production-grade AI Document Assistant called **LibrAI**.\n\nLibrAI is designed for digital libraries, assessment tools, and enterprise document intelligence, aiming to provide efficient and accurate document processing and analysis capabilities.\n\n**Key Features and Goals**\n---------------------------\n\n*   High-speed PDF/TXT parsing and normalization\n*   Semantic chunking with sentence-boundary packaging and a sliding overlap window\n*   Hybrid retrieval combining BM25 keyword matching with dense vector similarity and Reciprocal Rank Fusion (RRF)\n*   Redis caching and rate limiting for improved performance and security\n\nThe project's primary objective is to create a robust and scalable AI Document Assistant that can efficiently process and analyze large volumes of documents, providing accurate and reliable insights for various applications.",
+        "timestamp": "2026-08-24T19:05:41.674Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.411,
+            "excerpt": "... Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architectu ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "insufficient",
+        "confidenceScore": 0.411,
+        "latencyMs": 45395
+      }
     ]
   }
 }
