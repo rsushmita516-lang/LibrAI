@@ -106,6 +106,8 @@ export default function App() {
                 sessionId={sessionId}
                 onResetSession={handleResetSession}
                 onOpenCitation={(cit) => setActiveCitation(cit)}
+                rateLimitInfo={rateLimitInfo}
+                onRateLimitInfo={setRateLimitInfo}
               />
             </div>
           </div>
