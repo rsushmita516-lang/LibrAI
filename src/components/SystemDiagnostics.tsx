@@ -148,7 +148,7 @@ export const SystemDiagnostics: React.FC = () => {
             <div className="flex justify-between py-1">
               <span>Rate Limit Policy:</span>
               <span className="font-mono text-slate-800">
-                {configData?.redis?.rateLimitMaxRequests || 30} req / {configData?.redis?.rateLimitWindowSeconds || 60}s
+                {configData?.redis?.rateLimitMaxRequests || 3} req / {configData?.redis?.rateLimitWindowSeconds || 60}s
               </span>
             </div>
           </div>

@@ -22,8 +22,6 @@ interface ChatInterfaceProps {
   sessionId: string;
   onResetSession: () => void;
   onOpenCitation: (citation: Citation) => void;
-  rateLimitInfo: { limit: number; remaining: number; reset: number } | null;
-  onRateLimitInfo: (info: { limit: number; remaining: number; reset: number }) => void;
 }
 
 export const ChatInterface: React.FC<ChatInterfaceProps> = ({
@@ -31,8 +29,6 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
   sessionId,
   onResetSession,
   onOpenCitation,
-  rateLimitInfo,
-  onRateLimitInfo,
 }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputQuestion, setInputQuestion] = useState("");
@@ -96,11 +92,6 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
       });
 
       const data = await res.json();
-      onRateLimitInfo({
-        limit: Number(res.headers.get("x-ratelimit-limit") || 0),
-        remaining: Number(res.headers.get("x-ratelimit-remaining") || 0),
-        reset: Number(res.headers.get("x-ratelimit-reset") || 0),
-      });
       if (!res.ok) {
         throw new Error(data.message || "Failed to get AI answer.");
       }
@@ -165,11 +156,6 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
           </div>
           <p className="text-[11px] text-slate-500 mt-0.5">
             Session: <code className="font-mono text-slate-700">{sessionId}</code> • Redis TTL: 24h
-          </p>
-          <p className="text-[10px] text-slate-400 mt-1">
-            {rateLimitInfo
-              ? `Rate limit: ${rateLimitInfo.remaining}/${rateLimitInfo.limit} remaining • resets in ${rateLimitInfo.reset}s`
-              : "Rate limit: send a message to load status"}
           </p>
         </div>
 

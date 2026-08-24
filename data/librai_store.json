@@ -829,6 +829,58 @@
         "confidenceScore": 0,
         "latencyMs": 52086
       }
+    ],
+    "sess_aeupflih": [
+      {
+        "id": "msg_1ce741d8744b",
+        "role": "user",
+        "content": "Why is that specific overlap window used?",
+        "timestamp": "2026-08-24T18:39:57.142Z"
+      },
+      {
+        "id": "msg_1cac55252243",
+        "role": "assistant",
+        "content": "**Overlap Window Explanation**\n================================\n\nThe specified overlap window of 120 tokens is used to ensure **conversational context continuity**. This design choice is crucial for maintaining the integrity of the conversation history and preventing **context overflow**.\n\n**Token Overlap Window Benefits**\n--------------------------------\n\nBy using an overlap window, the model can effectively:\n\n*   **Maintain context**: The sliding window allows the model to capture the most relevant information from the conversation history, ensuring that the current prompt is grounded in the previous context.\n*   **Prevent context overflow**: The overlap window prevents the model from accumulating too much information, which can lead to **hallucination** and **inaccurate responses**.\n\n**Token Count and Window Size**\n------------------------------\n\nThe chosen overlap window size of 120 tokens is a trade-off between **context sensitivity** and **computational efficiency**. A larger window would provide more context, but at the cost of increased computational requirements. The selected size balances these competing demands, enabling the model to efficiently process and respond to user queries while maintaining conversational continuity.\n\n**Source Chunk Reference**\n-------------------------\n\nFor more information on the overlap window and its implications for conversational AI, refer to [Section 2: Retrieval Strategies and Context Management] [Page 1, Chunk 2].",
+        "timestamp": "2026-08-24T18:39:57.142Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9863,
+            "excerpt": "... Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architectu ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9863,
+        "latencyMs": 3
+      },
+      {
+        "id": "msg_975281da63d1",
+        "role": "user",
+        "content": "Give me summary",
+        "timestamp": "2026-08-24T18:41:49.289Z"
+      },
+      {
+        "id": "msg_847a84e8f110",
+        "role": "assistant",
+        "content": "**Overlap Window Summary**\n==========================\n\nThe overlap window of 120 tokens is used to ensure conversational context continuity. This design choice:\n\n*   Maintains context by capturing relevant information from the conversation history\n*   Prevents context overflow, reducing the risk of hallucination and inaccurate responses\n\nThe chosen window size balances context sensitivity and computational efficiency, enabling efficient processing and response to user queries while maintaining conversational continuity.\n\n**Source Chunk Reference**\n-------------------------\n\n[Page 1, Chunk 2]",
+        "timestamp": "2026-08-24T18:41:49.289Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0,
+            "excerpt": "# LibrAI Technical Reference & Architecture Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The sys"
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "insufficient",
+        "confidenceScore": 0,
+        "latencyMs": 84379
+      }
     ]
   }
 }

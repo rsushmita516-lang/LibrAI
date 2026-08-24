@@ -59,7 +59,7 @@ export const config: AppConfig = {
     sessionTtlSeconds: parseInt(process.env.SESSION_TTL_SECONDS || "86400", 10),
     cacheTtlSeconds: parseInt(process.env.CACHE_TTL_SECONDS || "3600", 10),
     rateLimitWindowSeconds: parseInt(process.env.RATE_LIMIT_WINDOW_SECONDS || "60", 10),
-    rateLimitMaxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || "30", 10),
+    rateLimitMaxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || "3", 10),
   },
   chunking: {
     targetTokens: parseInt(process.env.CHUNK_SIZE_TOKENS || "800", 10),

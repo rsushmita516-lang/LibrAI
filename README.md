@@ -139,7 +139,7 @@ LibrAI leverages Redis for three mission-critical capabilities:
 
 ### 3. Sliding-Window Rate Limiting
 - **Key Schema**: `ratelimit:client:<sessionId/IP>`
-- **Window**: 60 seconds (max 30 requests).
+- **Window**: 60 seconds (max 3 requests).
 - **Headers**: Returns `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset`.
 - **Exceeded Response**: Returns HTTP `429 Too Many Requests` with a descriptive retry-after payload.
 

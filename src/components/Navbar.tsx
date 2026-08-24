@@ -9,7 +9,6 @@ interface NavbarProps {
   activeTab: "chat" | "chunks" | "system";
   setActiveTab: (tab: "chat" | "chunks" | "system") => void;
   systemStatus: SystemStatus | null;
-  rateLimitInfo: { limit: number; remaining: number; reset: number } | null;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -19,7 +18,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   activeTab,
   setActiveTab,
   systemStatus,
-  rateLimitInfo,
 }) => {
   return (
     <header id="app-header" className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">

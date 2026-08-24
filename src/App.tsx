@@ -14,7 +14,6 @@ export default function App() {
   const [sessionId, setSessionId] = useState<string>(() => `sess_${Math.random().toString(36).slice(2, 10)}`);
   const [activeCitation, setActiveCitation] = useState<Citation | null>(null);
   const [systemStatus, setSystemStatus] = useState<SystemStatus | null>(null);
-  const [rateLimitInfo, setRateLimitInfo] = useState<{ limit: number; remaining: number; reset: number } | null>(null);
 
   const fetchDocuments = async () => {
     try {
@@ -82,7 +81,6 @@ export default function App() {
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         systemStatus={systemStatus}
-        rateLimitInfo={rateLimitInfo}
       />
 
       {/* Main Container */}
@@ -106,8 +104,6 @@ export default function App() {
                 sessionId={sessionId}
                 onResetSession={handleResetSession}
                 onOpenCitation={(cit) => setActiveCitation(cit)}
-                rateLimitInfo={rateLimitInfo}
-                onRateLimitInfo={setRateLimitInfo}
               />
             </div>
           </div>
