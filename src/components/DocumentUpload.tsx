@@ -221,6 +221,9 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
                       <p className={`font-medium truncate ${isSelected ? "text-indigo-950 font-semibold" : "text-slate-800"}`}>
                         {doc.originalName}
                       </p>
+                      <p className="text-[10px] text-slate-400 font-mono truncate" title={doc.id}>
+                        ID: {doc.id}
+                      </p>
                       <p className="text-[11px] text-slate-500">
                         {doc.chunkCount} chunks • {(doc.sizeBytes / 1024).toFixed(1)} KB • {doc.pageCount || 1} pages
                       </p>
