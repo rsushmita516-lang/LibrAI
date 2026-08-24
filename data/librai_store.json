@@ -29,6 +29,21 @@
       "createdAt": "2026-08-24T17:38:43.287Z",
       "updatedAt": "2026-08-24T17:38:43.287Z",
       "summary": "Comprehensive architectural and operational manual for the LibrAI Document Assistant system."
+    },
+    "doc_4b6f064d83dac615": {
+      "id": "doc_4b6f064d83dac615",
+      "filename": "doc_4b6f064d83dac615_NewSyllabus_Network Security.pdf",
+      "originalName": "NewSyllabus_Network Security.pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 231722,
+      "checksum": "b36abd26a51d9f0155652cf8ddf3fa98540be5b783693c9a329cab0dcf7c86a0",
+      "status": "ready",
+      "chunkCount": 4,
+      "createdAt": "2026-08-24T19:35:57.573Z",
+      "updatedAt": "2026-08-24T19:36:01.563Z",
+      "pageCount": 4,
+      "totalTokens": 1291,
+      "summary": "Course Title: Fundamental of Network Security\nCourse Credit:03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment.\nThe objectives of this course can be illustr..."
     }
   },
   "chunks": {
@@ -168,6 +183,116 @@
           "txt",
           "page",
           "semantic"
+        ]
+      }
+    ],
+    "doc_4b6f064d83dac615": [
+      {
+        "id": "chk_doc_4b6f_0",
+        "documentId": "doc_4b6f064d83dac615",
+        "chunkIndex": 0,
+        "text": "Course Title: Fundamental of Network Security\nCourse Credit:03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual understanding of network security issues.\n➢ To develop basic skills of secure network architecture and explain the theory behind the security of different cryptographic algorithms.\n➢ To describe common network vulnerabilities and attacks, defense mechanisms against network attacks, and cryptographic protection mechanisms.\n➢ To explore the requirements of real-time communication security and issues related to the security of web services. Pre-requisites: Basic Networking Concept\nCourse Contents/Syllabus:\nWeightage (%)\nModule I Introduction to Network Security\n20%\nIntroduction to Security Attacks, Services and Mechanism, Classical encryption techniques, Substitution Ciphers and\nTransposition ciphers, Stream and Block ciphers. Module II Secret Key and Public Key Cryptography\n25%\nModern Block Ciphers: Block Ciphers Principles, Data Encryption Standard (DES), Strength of DES, Block Cipher\nModes of Operations, Triple DES\nL T P/S SW/F\nW\nNumber\nof PSDA\nTOTAL\nCREDIT\nUNITS\n2 - - 2 5 3",
+        "pageNumber": 1,
+        "startChar": 0,
+        "endChar": 1322,
+        "tokenCount": 331,
+        "keywords": [
+          "course",
+          "network",
+          "security",
+          "ciphers",
+          "block",
+          "introduction",
+          "attacks",
+          "des",
+          "credit",
+          "objectives",
+          "cryptography",
+          "secure",
+          "issues",
+          "basic",
+          "cryptographic"
+        ]
+      },
+      {
+        "id": "chk_doc_4b6f_1",
+        "documentId": "doc_4b6f064d83dac615",
+        "chunkIndex": 1,
+        "text": "Advanced Encryption Standard (AES), Principals of Public Key Crypto Systems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digital Signatures, Digital Signature Standards (DSS), proof of Digital Signature Algorithm\nModule IV Key Management\n10%\nKey Management and Distribution: Symmetric Key Distribution, Diffie-Hellman Key Exchange, Public Key\nDistribution,\nX.509 Certificates, Public Key Infrastructure. Module V Web Security\n15%\nAuthentication Applications: Kerberos, Electronic Mail Security: Pretty Good Privacy (PGP), S/MIME. IP Security: Architecture, Authentication Header, Encapsulating Security Payloads, Introduction to Secure Socket\nLayer, Secure Electronic Transaction (SET)\nModule VI System Security\n15%\nSystem Security: Introductory Idea of Intrusion, Intrusion Detection Techniques, Viruses and Worms, Firewalls, Design\nPrinciples of Firewalls, IT Acts and Cyber Laws (Global Standards), Virtual Private Network\nCourse Learning Outcomes:\nThe Fundamental of Network Security program gives students the chance to develop the technical skills necessary to fully manage sophisticated and vulnerable\ncomputer network environments. Students will have the skill sets needed to handle the day-to-day troubleshooting problems for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques.",
+        "pageNumber": 2,
+        "startChar": 0,
+        "endChar": 1617,
+        "tokenCount": 405,
+        "keywords": [
+          "security",
+          "key",
+          "authentication",
+          "algorithm",
+          "module",
+          "digital",
+          "public",
+          "standards",
+          "message",
+          "secure",
+          "distribution",
+          "network",
+          "students",
+          "encryption",
+          "rsa"
+        ]
+      },
+      {
+        "id": "chk_doc_4b6f_2",
+        "documentId": "doc_4b6f064d83dac615",
+        "chunkIndex": 2,
+        "text": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection system and firewall and cyber laws associated to security. Pedagogy for Course Delivery:\nThe course would be covered under theory in blended / flip mode. In addition to assigning project–based learning, early exposure to hands-on design to enhance the\nmotivation among the students. It incorporates designing of problems, analysis of solutions submitted by the student and how learning objectives were achieved. Continuous evaluation of the students would be covered under quiz, viva, self-work, tutorial etc. List of Professional Skill Development Activities (PSDA):\nActivity 1 Guest Lecture with industry expert\nActivity 2 Problem solving through industry oriented case\nstudies\nActivity 3 Design a new Cryptographic technique group wise\nActivity 4 Group wise quiz based on interview related questions\nActivity 5 Design a Small virtual private network\nAssessment/ Examination Scheme:\nTheory L/T (%) Lab/Practical/Studio (%) Total (%)\n100% - 100%",
+        "pageNumber": 3,
+        "startChar": 0,
+        "endChar": 1202,
+        "tokenCount": 301,
+        "keywords": [
+          "activity",
+          "identify",
+          "design",
+          "100",
+          "apply",
+          "different",
+          "authentication",
+          "techniques",
+          "solving",
+          "issues",
+          "related",
+          "security",
+          "course",
+          "covered",
+          "theory"
+        ]
+      },
+      {
+        "id": "chk_doc_4b6f_3",
+        "documentId": "doc_4b6f064d83dac615",
+        "chunkIndex": 3,
+        "text": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application & Standards”, 5th Edition, Prentice Hall Publication, 2013\n• W. Stallings, “Cryptography and Network Security: Principles and Practice”, International Edition, Pearson Education, 2013.\n• Behrouz A. Frouzan, “Cryptography and Network Security”, Tata McGraw Hill Education, 2007\nReference Book:\n• Bruce Schiener, “Applied Cryptography”, Second Edition, John Wiley & Sons Publication, 1996\n• Bernard Menezes,” Network Security and C r y p t o g r a p h y ”, Cengage Learning Publication, 2010\n• Atul Kahate, “Cryptography and Network Security”, Tata McGraw Hill Education, 2003\nWeb Reference/ Article/Journal:\n• http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n• http://en.wikipedia.org/wiki/Network_security",
+        "pageNumber": 4,
+        "startChar": 0,
+        "endChar": 961,
+        "tokenCount": 241,
+        "keywords": [
+          "security",
+          "cryptography",
+          "network",
+          "assessment",
+          "edition",
+          "publication",
+          "education",
+          "2013",
+          "book",
+          "stallings",
+          "tata",
+          "mcgraw",
+          "hill",
+          "reference",
+          "http"
         ]
       }
     ]
@@ -1138,6 +1263,54 @@
         "evidenceStatus": "insufficient",
         "confidenceScore": 0.411,
         "latencyMs": 45395
+      }
+    ],
+    "sess_tahz69do": [
+      {
+        "id": "msg_c08ad376b67c",
+        "role": "user",
+        "content": "what is the capital of India?",
+        "timestamp": "2026-08-24T19:39:27.906Z"
+      },
+      {
+        "id": "msg_ec79a1d5df1f",
+        "role": "assistant",
+        "content": "The uploaded document does not contain sufficient information to answer this question.",
+        "timestamp": "2026-08-24T19:39:27.906Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9949,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.958,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0.8994,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection sys ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9949,
+        "latencyMs": 94431
       }
     ]
   }
