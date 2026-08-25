@@ -105,7 +105,7 @@ chatRouter.post("/", async (req: Request, res: Response): Promise<any> => {
     const boundedHistory = buildBoundedHistory(sessionHistory);
 
     // 5. Retrieve relevant chunks
-    const retrievalResults = await retrieveRelevantChunks(documentId, question, undefined, 4);
+    const retrievalResults = await retrieveRelevantChunks(documentId, question, undefined, 2);
     const citations = formatCitations(retrievalResults);
 
     // Top chunk confidence score

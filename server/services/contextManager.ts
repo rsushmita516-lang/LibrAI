@@ -6,8 +6,8 @@ import { RetrievalResult } from "./retrieval.js";
 import { config } from "../config.js";
 import { estimateTokenCount } from "./extractor.js";
 
-const MAX_HISTORY_MESSAGES = 6;
-const MAX_HISTORY_TOKENS = 1200;
+const MAX_HISTORY_MESSAGES = 3;
+const MAX_HISTORY_TOKENS = 600;
 
 export async function getSessionHistory(sessionId: string): Promise<ChatMessage[]> {
   const redisKey = `session:${sessionId}`;

@@ -145,7 +145,7 @@ export async function retrieveRelevantChunks(
   documentId: string,
   query: string,
   queryEmbedding?: number[],
-  topK = 4
+  topK = 2
 ): Promise<RetrievalResult[]> {
   const chunks = await store.getChunks(documentId);
   if (chunks.length === 0) return [];

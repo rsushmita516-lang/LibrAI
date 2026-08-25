@@ -1,151 +1,70 @@
 {
   "documents": {
-    "doc_93885f20c9aff7b3": {
-      "id": "doc_93885f20c9aff7b3",
-      "filename": "doc_93885f20c9aff7b3_NewSyllabus_Computer oriented numerical analysis.pdf",
-      "originalName": "NewSyllabus_Computer oriented numerical analysis.pdf",
-      "mimeType": "application/pdf",
-      "sizeBytes": 163961,
-      "checksum": "a73a488d2ad4f04439700bf92ceced9cad71c0c1291619b5411bbd092bed3d40",
+    "doc_sample_librai_manual": {
+      "id": "doc_sample_librai_manual",
+      "filename": "LibrAI_Architecture_Manual.md",
+      "originalName": "LibrAI_Architecture_Manual.md",
+      "mimeType": "text/markdown",
+      "sizeBytes": 2215,
+      "checksum": "cecd9286ef0d30be8dbe63dc348bd8f9f00d7c1964f2e772289493be10679d26",
       "status": "ready",
-      "chunkCount": 4,
-      "createdAt": "2026-08-23T19:04:46.548Z",
-      "updatedAt": "2026-08-23T19:04:47.588Z",
       "pageCount": 4,
-      "totalTokens": 1194,
-      "summary": "Course Name: COMPUTER ORIENTED NUMERICAL ANALYSIS\nCourse Level : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques.\nTopics included are numerical error, root-finding, interpolation and polynomial approximatio..."
+      "totalTokens": 554,
+      "chunkCount": 1,
+      "createdAt": "2026-08-25T19:59:25.752Z",
+      "updatedAt": "2026-08-25T19:59:25.752Z",
+      "summary": "Comprehensive architectural and operational manual for the LibrAI Document Assistant system."
     },
-    "doc_4b6f064d83dac615": {
-      "id": "doc_4b6f064d83dac615",
-      "filename": "doc_4b6f064d83dac615_NewSyllabus_Network Security.pdf",
+    "doc_848be304705a1ef3": {
+      "id": "doc_848be304705a1ef3",
+      "filename": "doc_848be304705a1ef3_NewSyllabus_Network Security.pdf",
       "originalName": "NewSyllabus_Network Security.pdf",
       "mimeType": "application/pdf",
       "sizeBytes": 231722,
       "checksum": "b36abd26a51d9f0155652cf8ddf3fa98540be5b783693c9a329cab0dcf7c86a0",
       "status": "ready",
       "chunkCount": 4,
-      "createdAt": "2026-08-24T19:35:57.573Z",
-      "updatedAt": "2026-08-24T19:36:01.563Z",
+      "createdAt": "2026-08-25T19:59:53.901Z",
+      "updatedAt": "2026-08-25T19:59:55.989Z",
       "pageCount": 4,
       "totalTokens": 1291,
       "summary": "Course Title: Fundamental of Network Security\nCourse Credit:03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment.\nThe objectives of this course can be illustr..."
     }
   },
   "chunks": {
-    "doc_93885f20c9aff7b3": [
+    "doc_sample_librai_manual": [
       {
-        "id": "chk_doc_9388_0",
-        "documentId": "doc_93885f20c9aff7b3",
+        "id": "chk_doc_samp_0",
+        "documentId": "doc_sample_librai_manual",
         "chunkIndex": 0,
-        "text": "Course Name: COMPUTER ORIENTED NUMERICAL ANALYSIS\nCourse Level : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integration, and differential equations. Pre-requisites:\nBasics of Differentiation and Integration\nCourse Contents/Syllabus:\nWeightage (%)\nModule I: Introduction\n15 Introduction to Numerical Analysis, Application Area of N.A., Numbers and Their Accuracy, Mathematical,\npreliminaries, Error Analysis, Absolute, Relatives, Truncation and Rounding Error. Module II: Solution of Linear Algebraic Equations\n15 Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values,\nGauss Seidel Iterative Method, Gauss Elimination Method\nL T P/S SW/FW No. of\nPSDA\nTOTAL\nCREDIT\nUNITS\n2 0 2 2 5 4",
+        "text": "# LibrAI Technical Reference & Architecture Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architecture comprising:\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing. 2. Semantic Chunking: Sentence-boundary packaging with an 800-token target size and a 120-token sliding overlap window to guarantee conversational context continuity. 3. Hybrid Retrieval: Combining BM25 keyword matching with dense vector similarity and Reciprocal Rank Fusion (RRF). 4. Redis Caching & Rate Limiting: Utilizing sliding-window rate limiters, multi-turn conversation session stores with configurable TTL, and normalized query response caching. ## Section 2: Retrieval Strategies and Context Management\nTo prevent context overflow and reduce model hallucination:\n- Only the top-k highest scoring passages (default: 4 chunks) are passed to the LLM system prompt.\n- Conversation history is trimmed dynamically to maintain strict adherence to model context limits (max 1,200 history tokens).\n- The prompt enforces strict negative grounding: if a user's question cannot be completely answered by the context, the model explicitly refuses to speculate and returns an unavailable status. ## Section 3: Evidence Mode & Grounding Verification\nLibrAI's unique \"Evidence Mode\" original feature provides:\n- Exact character excerpt extraction and chunk citations (e.g. [Page 1, Chunk 2]).\n- An automated confidence score calculated from BM25 and semantic similarity weights.\n- Grounding status classification: 'supported' (confidence >= 0.45), 'insufficient' (low confidence or missing evidence), or 'unsupported' (irrelevant query). ## Section 4: Performance Benchmarks and Scalability\nUnder typical production loads:\n- Cache hits return in under 15ms with the header \"cached: true\".\n- Chunking processes 100 pages of text in under 450ms.\n- Hybrid BM25 lookup evaluates across 10,000 chunks in sub-8ms latency.\n- Supported file types include PDF, TXT, and Markdown files up to 10MB in size.",
         "pageNumber": 1,
         "startChar": 0,
-        "endChar": 955,
-        "tokenCount": 239,
+        "endChar": 2211,
+        "tokenCount": 553,
         "keywords": [
-          "course",
-          "numerical",
-          "method",
-          "analysis",
-          "error",
-          "introduction",
-          "gauss",
-          "credit",
-          "units",
-          "application",
-          "approximation",
-          "differentiation",
-          "integration",
-          "equations",
-          "module"
-        ]
-      },
-      {
-        "id": "chk_doc_9388_1",
-        "documentId": "doc_93885f20c9aff7b3",
-        "chunkIndex": 1,
-        "text": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation and Curve Fitting\n20 Types of Operators, Basic Definition, Forward Differences, Backward Differences, Central Differences,\nNewton Forward/Backward/Central Differences Formula, Newton’s Divided Difference Formula, Lagrange’s\nMethod. Module V: Numerical Differentiation & Integration\n15\nNumerical Differentiation based on Interpolation Formula, Numerical Integration, Trapezoidal Rule,\nSimpson’s 1/3 rule, Simpson’s 3/8 Rule, Weddle’s Rule. Module VI: Numerical Solution to ODE\n15 Basic Definition, Euler’s Method, Modified Euler’s Method, Runga Kutta Method (2nd and 4th Order)\nStudent Learning Outcomes:\nAfter completion of the course,the student will be able to:\nExplain concept of various numerical methods, in particular, with reference to numerical solution of non linear equations and system\nof linear equations, interpolation, numerical differentiation and integration and numerical solution of ordinary differential equations. Apply important theorems. Use different formulae for various numerical methods to be covered with an aim of understand the fundamentals, concepts and\npractical use of these methods in the field of computer sciences and applications.",
-        "pageNumber": 2,
-        "startChar": 0,
-        "endChar": 1386,
-        "tokenCount": 347,
-        "keywords": [
-          "method",
-          "numerical",
-          "module",
-          "solution",
-          "equations",
-          "differences",
-          "rule",
-          "newton",
-          "interpolation",
-          "formula",
-          "differentiation",
-          "integration",
-          "methods",
-          "basic",
-          "definition"
-        ]
-      },
-      {
-        "id": "chk_doc_9388_2",
-        "documentId": "doc_93885f20c9aff7b3",
-        "chunkIndex": 2,
-        "text": "PSDA:\n• Applications of Numerical Methods in various domains\n• Numerical problems on Interpolation\n• Numerical problems on Numerical Integration and Differentiation, Ordinary Differential Equations\n• Numerical problems on solution of algebraic and transcendental equations\n• Numerical problems on solution of system of linear equations\nPedagogy for Course Delivery:\n• Lectures,\n• Assignments,\n• Presentations,\n• Online / Practical Test and\n• Class Test\n• Blended Learning using flipped mode\nLab/ Practical’s details, if applicable:\nList of Experiments:\n1. Implementation of Newton’s forward interpolation formula\n2. Implementation of Newton’s backward interpolation formula\n3. Implementation of Lagrange’s interpolation formula\n4. Implementation of Trapezoidal rule\n5. Implementation of Simpson’s 1/3 rule\n6. Implementation of Simpson’s 3/8 rule\n7. Implementation of Weddle’s rule\n8. Implementation of Simpson’s 1/3 rule\n9. Implementation of Bisection method\n10. Implementation of Newton-Raphson method\n11. Implementation of Regula Falsi Method\n12. Implementation of Gauss Seidel Method\n13. Implementation of Gauss Elimination Method\n14. Implementation of Euler method\n15. Implementation of Runge Kutta Method",
-        "pageNumber": 3,
-        "startChar": 0,
-        "endChar": 1209,
-        "tokenCount": 303,
-        "keywords": [
-          "implementation",
-          "method",
-          "numerical",
-          "rule",
-          "problems",
-          "interpolation",
-          "equations",
-          "formula",
-          "simpson",
-          "solution",
-          "practical",
-          "test",
-          "newton",
-          "gauss",
-          "psda"
-        ]
-      },
-      {
-        "id": "chk_doc_9388_3",
-        "documentId": "doc_93885f20c9aff7b3",
-        "chunkIndex": 3,
-        "text": "Assessment/ Examination Scheme:\nTheory L/T (%) Lab/Practical/Studio (%) Total\n75% 25% 100%\nContinuous Assessment/Internal Assessment End Term Examination\nComponents (Drop down) Mid Term Exam Home Assignment Presentation/Viva Attendance\nWeightage (%)\n20% 20% 5% 5% 50%\nLab/ Practical/ Studio Assessment:\nContinuous Assessment/Internal Assessment End Term Practical\nExamination\nComponents (Drop down Lab record Performance Viva Attendance\nWeightage (%) 15 20 10 5 50\nText:\n1. Mollah S. A., Numerical Analysis and Computational Procedures, Books & Allied Ltd; 5th Revised edition (1 January 2000)\n2. Sastry S. S., Introductory Methods of Numerical Analysis, Prentice Hall India Learning Private Limited; Fifth edition (1 January\n2012)\n3. Jain M. K., Iyengar S. R. K., Jain R. K., Numerical Methods: For Scientific and Engineering Computation, New Age International\n(1 January 2012)\nReferences:\nRajaraman V, Computer Oriented Numerical Methods, PHI, 3rd Edition, 2006. Krishnamurthy, E.V., Sen, S.K, Computer Based Numerical Algorithms, Affiliated East-west Press Pvt Ltd, 1st Ediiton, 2009. Stoer, Bullrich, Computer Oriented Numerical Methods, Springer Verlag, 1980.",
-        "pageNumber": 4,
-        "startChar": 0,
-        "endChar": 1164,
-        "tokenCount": 291,
-        "keywords": [
-          "assessment",
-          "numerical",
-          "methods",
-          "examination",
-          "lab",
-          "practical",
-          "term",
-          "edition",
-          "january",
-          "computer",
-          "2012",
-          "studio",
-          "continuous",
-          "internal",
-          "end"
+          "context",
+          "section",
+          "librai",
+          "architecture",
+          "bm25",
+          "model",
+          "grounding",
+          "evidence",
+          "confidence",
+          "document",
+          "system",
+          "pdf",
+          "txt",
+          "page",
+          "semantic"
         ]
       }
     ],
-    "doc_4b6f064d83dac615": [
+    "doc_848be304705a1ef3": [
       {
-        "id": "chk_doc_4b6f_0",
-        "documentId": "doc_4b6f064d83dac615",
+        "id": "chk_doc_848b_0",
+        "documentId": "doc_848be304705a1ef3",
         "chunkIndex": 0,
         "text": "Course Title: Fundamental of Network Security\nCourse Credit:03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual understanding of network security issues.\n➢ To develop basic skills of secure network architecture and explain the theory behind the security of different cryptographic algorithms.\n➢ To describe common network vulnerabilities and attacks, defense mechanisms against network attacks, and cryptographic protection mechanisms.\n➢ To explore the requirements of real-time communication security and issues related to the security of web services. Pre-requisites: Basic Networking Concept\nCourse Contents/Syllabus:\nWeightage (%)\nModule I Introduction to Network Security\n20%\nIntroduction to Security Attacks, Services and Mechanism, Classical encryption techniques, Substitution Ciphers and\nTransposition ciphers, Stream and Block ciphers. Module II Secret Key and Public Key Cryptography\n25%\nModern Block Ciphers: Block Ciphers Principles, Data Encryption Standard (DES), Strength of DES, Block Cipher\nModes of Operations, Triple DES\nL T P/S SW/F\nW\nNumber\nof PSDA\nTOTAL\nCREDIT\nUNITS\n2 - - 2 5 3",
         "pageNumber": 1,
@@ -171,8 +90,8 @@
         ]
       },
       {
-        "id": "chk_doc_4b6f_1",
-        "documentId": "doc_4b6f064d83dac615",
+        "id": "chk_doc_848b_1",
+        "documentId": "doc_848be304705a1ef3",
         "chunkIndex": 1,
         "text": "Advanced Encryption Standard (AES), Principals of Public Key Crypto Systems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digital Signatures, Digital Signature Standards (DSS), proof of Digital Signature Algorithm\nModule IV Key Management\n10%\nKey Management and Distribution: Symmetric Key Distribution, Diffie-Hellman Key Exchange, Public Key\nDistribution,\nX.509 Certificates, Public Key Infrastructure. Module V Web Security\n15%\nAuthentication Applications: Kerberos, Electronic Mail Security: Pretty Good Privacy (PGP), S/MIME. IP Security: Architecture, Authentication Header, Encapsulating Security Payloads, Introduction to Secure Socket\nLayer, Secure Electronic Transaction (SET)\nModule VI System Security\n15%\nSystem Security: Introductory Idea of Intrusion, Intrusion Detection Techniques, Viruses and Worms, Firewalls, Design\nPrinciples of Firewalls, IT Acts and Cyber Laws (Global Standards), Virtual Private Network\nCourse Learning Outcomes:\nThe Fundamental of Network Security program gives students the chance to develop the technical skills necessary to fully manage sophisticated and vulnerable\ncomputer network environments. Students will have the skill sets needed to handle the day-to-day troubleshooting problems for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques.",
         "pageNumber": 2,
@@ -198,8 +117,8 @@
         ]
       },
       {
-        "id": "chk_doc_4b6f_2",
-        "documentId": "doc_4b6f064d83dac615",
+        "id": "chk_doc_848b_2",
+        "documentId": "doc_848be304705a1ef3",
         "chunkIndex": 2,
         "text": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection system and firewall and cyber laws associated to security. Pedagogy for Course Delivery:\nThe course would be covered under theory in blended / flip mode. In addition to assigning project–based learning, early exposure to hands-on design to enhance the\nmotivation among the students. It incorporates designing of problems, analysis of solutions submitted by the student and how learning objectives were achieved. Continuous evaluation of the students would be covered under quiz, viva, self-work, tutorial etc. List of Professional Skill Development Activities (PSDA):\nActivity 1 Guest Lecture with industry expert\nActivity 2 Problem solving through industry oriented case\nstudies\nActivity 3 Design a new Cryptographic technique group wise\nActivity 4 Group wise quiz based on interview related questions\nActivity 5 Design a Small virtual private network\nAssessment/ Examination Scheme:\nTheory L/T (%) Lab/Practical/Studio (%) Total (%)\n100% - 100%",
         "pageNumber": 3,
@@ -225,8 +144,8 @@
         ]
       },
       {
-        "id": "chk_doc_4b6f_3",
-        "documentId": "doc_4b6f064d83dac615",
+        "id": "chk_doc_848b_3",
+        "documentId": "doc_848be304705a1ef3",
         "chunkIndex": 3,
         "text": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application & Standards”, 5th Edition, Prentice Hall Publication, 2013\n• W. Stallings, “Cryptography and Network Security: Principles and Practice”, International Edition, Pearson Education, 2013.\n• Behrouz A. Frouzan, “Cryptography and Network Security”, Tata McGraw Hill Education, 2007\nReference Book:\n• Bruce Schiener, “Applied Cryptography”, Second Edition, John Wiley & Sons Publication, 1996\n• Bernard Menezes,” Network Security and C r y p t o g r a p h y ”, Cengage Learning Publication, 2010\n• Atul Kahate, “Cryptography and Network Security”, Tata McGraw Hill Education, 2003\nWeb Reference/ Article/Journal:\n• http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n• http://en.wikipedia.org/wiki/Network_security",
         "pageNumber": 4,
@@ -2222,6 +2141,1194 @@
         "evidenceStatus": "supported",
         "confidenceScore": 0.8219,
         "latencyMs": 84422
+      }
+    ],
+    "sess_918zkt97": [
+      {
+        "id": "msg_aed0385a103f",
+        "role": "user",
+        "content": "give me the summary ?",
+        "timestamp": "2026-08-25T18:38:56.478Z"
+      },
+      {
+        "id": "msg_55cce65cde03",
+        "role": "assistant",
+        "content": "**Course Summary: Fundamental of Network Security**\n\n**Course Details:**\n\n* Course Title: Fundamental of Network Security\n* Course Credit: 03\n* Course Level: UG\n* Course Code: CSIT335\n\n**Course Objectives:**\n\n* Provide conceptual understanding of network security issues\n* Develop basic skills of secure network architecture\n* Describe common network vulnerabilities and attacks\n* Explore requirements of real-time communication security\n\n**Course Syllabus:**\n\n* Module I: Introduction to Network Security (20%)\n* Module II: Secret Key and Public Key Cryptography (25%)\n* Module III: Authentication Standards (15%)\n* Module IV: Key Management (10%)\n* Module V: Web Security (15%)\n* Module VI: System Security (15%)\n\n**Assessment Scheme:**\n\n* Theory L/T: 100%\n* Lab/Practical/Studio: 0%\n* Total: 100%\n\n**Text Books and Reference Books:**\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\n**Online References:**\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T18:38:56.479Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.215,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0.2113,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection sys ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.2025,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "insufficient",
+        "confidenceScore": 0.215,
+        "latencyMs": 160311
+      },
+      {
+        "id": "msg_25a447d489d9",
+        "role": "user",
+        "content": "what is the first module ?",
+        "timestamp": "2026-08-25T18:40:41.221Z"
+      },
+      {
+        "id": "msg_c039c3d55e67",
+        "role": "assistant",
+        "content": "**Module I: Introduction to Network Security**\n\n**Weightage: 20%**\n\n**Course Contents:**\n\n* Introduction to Security Attacks, Services, and Mechanism\n* Classical encryption techniques\n\t+ Substitution Ciphers\n\t+ Transposition Ciphers\n* Stream and Block ciphers\n\n**Learning Outcomes:**\n\n* Identify different types of security threats, attacks, and encryption techniques.",
+        "timestamp": "2026-08-25T18:40:41.222Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8478,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0.1513,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection sys ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 103362
+      }
+    ],
+    "sess_o3xejxwe": [
+      {
+        "id": "msg_133b17b080f6",
+        "role": "user",
+        "content": "what is the first module ?",
+        "timestamp": "2026-08-25T18:41:15.313Z"
+      },
+      {
+        "id": "msg_cbc83b610571",
+        "role": "assistant",
+        "content": "**Module I: Introduction to Network Security**\n\n**Weightage: 20%**\n\n**Course Contents:**\n\n* Introduction to Security Attacks, Services, and Mechanism\n* Classical encryption techniques\n\t+ Substitution Ciphers\n\t+ Transposition Ciphers\n* Stream and Block ciphers\n\n**Learning Outcomes:**\n\n* Identify different types of security threats, attacks, and encryption techniques.",
+        "timestamp": "2026-08-25T18:41:15.313Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8478,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0.1513,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection sys ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_fa2e84406910",
+        "role": "user",
+        "content": "what is total weightage of module 1 plus module 2",
+        "timestamp": "2026-08-25T18:45:37.658Z"
+      },
+      {
+        "id": "msg_589115a8f0b9",
+        "role": "assistant",
+        "content": "**Module I: Introduction to Network Security** (20%)\n\n**Module II: Secret Key and Public Key Cryptography** (25%)\n\n**Total Weightage:**\n20% + 25% = 45%",
+        "timestamp": "2026-08-25T18:45:37.658Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... des of Operations, Triple DES\nL T P/S SW/F\nW\nNumber\nof PSDA\nTOTAL\nCREDIT\nUNITS\n2 - - 2 5 3"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.7737,
+            "excerpt": "Advanced Encryption Standard (AES), Principals of Public Key Crypto Systems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0.3413,
+            "excerpt": "... Examination Scheme:\nTheory L/T (%) Lab/Practical/Studio (%) Total (%)\n100% - 100%"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0.1992,
+            "excerpt": "... Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application & Standards”, 5th Edition, Prentice Hall Publication, 2013\n• W. Stallings, “Cryptography and Network Se ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 61265
+      }
+    ],
+    "sess_k5qbvll3": [
+      {
+        "id": "msg_90414ea70705",
+        "role": "user",
+        "content": "Give me the summary of module 1",
+        "timestamp": "2026-08-25T18:58:05.991Z"
+      },
+      {
+        "id": "msg_f17b2992b456",
+        "role": "assistant",
+        "content": "**Module I: Introduction**\n\n**Summary:**\n\n* **Introduction to Numerical Analysis**: Overview of numerical analysis and its application areas.\n* **Application Area of N.A.**: Explanation of the importance and relevance of numerical analysis in computer sciences and applications.\n* **Numbers and Their Accuracy**: Discussion on the accuracy of numbers and the impact of errors in numerical computations.\n* **Mathematical Preliminaries**: Review of mathematical concepts and techniques necessary for numerical analysis.\n* **Error Analysis**: Explanation of types of errors (absolute, relative, truncation, and rounding) and their analysis.\n\n**Key Points:**\n\n* Numerical analysis is crucial in computer sciences and applications.\n* Understanding numbers and their accuracy is essential for numerical analysis.\n* Mathematical preliminaries and error analysis are fundamental to numerical analysis.\n\n**[Passage 2 | Page 1 | Chunk 0]**",
+        "timestamp": "2026-08-25T18:58:05.991Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... d 4th Order)\nStudent Learning Outcomes:\nAfter completion of the course,the student will be able to:\nExplain concept of various numerical methods, in particular, with reference to numerical solution of non linear equations and system\nof linear equations, interp ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8165,
+            "excerpt": "... : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differenti ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 95807
+      },
+      {
+        "id": "msg_1a6521f8a76e",
+        "role": "user",
+        "content": "give me the summary of module 1",
+        "timestamp": "2026-08-25T18:58:38.851Z"
+      },
+      {
+        "id": "msg_e010e69bd80f",
+        "role": "assistant",
+        "content": "**Module I: Introduction**\n\n[Page 1, Chunk 0]\n\n**Summary:**\n\nModule I covers the introduction to numerical analysis, its application areas, and mathematical preliminaries. Key topics include:\n\n* **Introduction to Numerical Analysis**: Definition and importance of numerical analysis in computer sciences.\n* **Application Area of N.A.**: Discussion on the application areas of numerical analysis.\n* **Numbers and Their Accuracy**: Discussion on the accuracy of numbers and mathematical operations.\n* **Mathematical Preliminaries**: Mathematical concepts and formulas required for numerical analysis.\n* **Error Analysis**: Discussion on error analysis, including absolute and relative errors, truncation, and rounding errors.\n\n**Weightage:** 15%",
+        "timestamp": "2026-08-25T18:58:38.851Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... d 4th Order)\nStudent Learning Outcomes:\nAfter completion of the course,the student will be able to:\nExplain concept of various numerical methods, in particular, with reference to numerical solution of non linear equations and system\nof linear equations, interp ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8165,
+            "excerpt": "... : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differenti ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 84413
+      }
+    ],
+    "sess_k8pya3fy": [
+      {
+        "id": "msg_8dafb41cae5d",
+        "role": "user",
+        "content": "Give me weightage of module 1",
+        "timestamp": "2026-08-25T19:02:42.279Z"
+      },
+      {
+        "id": "msg_35aa8099b816",
+        "role": "assistant",
+        "content": "**Weightage of Module I: Introduction**\n\n* Weightage: **15%**\n* [Page 1, Chunk 0]",
+        "timestamp": "2026-08-25T19:02:42.279Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... f Differentiation and Integration\nCourse Contents/Syllabus:\nWeightage (%)\nModule I: Introduction\n15 Introduction to Numerical Analysis, Application Area of N.A., Numbers and Their Accuracy, Mathematical,\npreliminaries, Error Analysis, Absolute, Relatives, Trun ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6997,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 32529
+      },
+      {
+        "id": "msg_fa4eb281bdc0",
+        "role": "user",
+        "content": "give me topic of module 2",
+        "timestamp": "2026-08-25T19:03:34.069Z"
+      },
+      {
+        "id": "msg_1014248b9cfb",
+        "role": "assistant",
+        "content": "**Topic of Module II: Solution of Linear Algebraic Equations**\n\n* Topic: Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values, Gauss Seidel Iterative Method, Gauss Elimination Method",
+        "timestamp": "2026-08-25T19:03:34.070Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8949,
+            "excerpt": "... C307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integratio ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 14176
+      },
+      {
+        "id": "msg_6a89233d422e",
+        "role": "user",
+        "content": "Give me weightage of module 1",
+        "timestamp": "2026-08-25T19:04:36.964Z"
+      },
+      {
+        "id": "msg_884d54d563f2",
+        "role": "assistant",
+        "content": "**Weightage of Module I: Introduction**\n\n* Weightage: **15%**\n* [Page 1, Chunk 0]",
+        "timestamp": "2026-08-25T19:04:36.964Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... f Differentiation and Integration\nCourse Contents/Syllabus:\nWeightage (%)\nModule I: Introduction\n15 Introduction to Numerical Analysis, Application Area of N.A., Numbers and Their Accuracy, Mathematical,\npreliminaries, Error Analysis, Absolute, Relatives, Trun ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6997,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_c7ebba749efd",
+        "role": "user",
+        "content": "what is the capital of India?",
+        "timestamp": "2026-08-25T19:05:50.239Z"
+      },
+      {
+        "id": "msg_c0a8b094a151",
+        "role": "assistant",
+        "content": "The uploaded document does not contain sufficient information to answer this question.",
+        "timestamp": "2026-08-25T19:05:50.239Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 1,
+            "excerpt": "... tion (1 January 2000)\n2. Sastry S. S., Introductory Methods of Numerical Analysis, Prentice Hall India Learning Private Limited; Fifth edition (1 January\n2012)\n3. Jain M. K., Iyengar S. R. K., Jain R. K., Numerical Methods: For Scientific and Engineering Compu ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.631,
+            "excerpt": "... d 4th Order)\nStudent Learning Outcomes:\nAfter completion of the course,the student will be able to:\nExplain concept of various numerical methods, in particular, with reference to numerical solution of non linear equations and system\nof linear equations, interp ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 42956
+      },
+      {
+        "id": "msg_396a01730019",
+        "role": "user",
+        "content": "what is the weightage of module 1??",
+        "timestamp": "2026-08-25T19:07:27.414Z"
+      },
+      {
+        "id": "msg_d8ed7e725a66",
+        "role": "assistant",
+        "content": "**Module I: Introduction**\n\n* Weightage: **15%**\n* [Page 1, Chunk 0]",
+        "timestamp": "2026-08-25T19:07:27.416Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 1,
+            "excerpt": "... : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differenti ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.8408,
+            "excerpt": "... d 4th Order)\nStudent Learning Outcomes:\nAfter completion of the course,the student will be able to:\nExplain concept of various numerical methods, in particular, with reference to numerical solution of non linear equations and system\nof linear equations, interp ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 9862
+      },
+      {
+        "id": "msg_2787cfd6cd36",
+        "role": "user",
+        "content": "give me topic of module 2",
+        "timestamp": "2026-08-25T19:20:21.435Z"
+      },
+      {
+        "id": "msg_b2cc6ea1f08b",
+        "role": "assistant",
+        "content": "**Topic of Module II: Solution of Linear Algebraic Equations**\n\n* Topic: Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values, Gauss Seidel Iterative Method, Gauss Elimination Method",
+        "timestamp": "2026-08-25T19:20:21.435Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8949,
+            "excerpt": "... C307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integratio ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_444a16bd1ad8",
+        "role": "user",
+        "content": "give me topic of module 2",
+        "timestamp": "2026-08-25T19:20:42.144Z"
+      },
+      {
+        "id": "msg_52b8427f2330",
+        "role": "assistant",
+        "content": "**Topic of Module II: Solution of Linear Algebraic Equations**\n\n* Topic: Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values, Gauss Seidel Iterative Method, Gauss Elimination Method",
+        "timestamp": "2026-08-25T19:20:42.144Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8949,
+            "excerpt": "... C307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integratio ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 3
+      },
+      {
+        "id": "msg_af61bcc83156",
+        "role": "user",
+        "content": "give me topic of module 2",
+        "timestamp": "2026-08-25T19:20:43.493Z"
+      },
+      {
+        "id": "msg_46c97ef31fe7",
+        "role": "assistant",
+        "content": "**Topic of Module II: Solution of Linear Algebraic Equations**\n\n* Topic: Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values, Gauss Seidel Iterative Method, Gauss Elimination Method",
+        "timestamp": "2026-08-25T19:20:43.493Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8949,
+            "excerpt": "... C307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integratio ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 4
+      },
+      {
+        "id": "msg_875997814de3",
+        "role": "user",
+        "content": "give me topic of module 2",
+        "timestamp": "2026-08-25T19:20:44.889Z"
+      },
+      {
+        "id": "msg_cf07070ab094",
+        "role": "assistant",
+        "content": "**Topic of Module II: Solution of Linear Algebraic Equations**\n\n* Topic: Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values, Gauss Seidel Iterative Method, Gauss Elimination Method",
+        "timestamp": "2026-08-25T19:20:44.889Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8949,
+            "excerpt": "... C307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integratio ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_88eb84bee7cc",
+        "role": "user",
+        "content": "give me topic of module 2",
+        "timestamp": "2026-08-25T19:20:46.212Z"
+      },
+      {
+        "id": "msg_3522baf57464",
+        "role": "assistant",
+        "content": "**Topic of Module II: Solution of Linear Algebraic Equations**\n\n* Topic: Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values, Gauss Seidel Iterative Method, Gauss Elimination Method",
+        "timestamp": "2026-08-25T19:20:46.212Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8949,
+            "excerpt": "... C307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integratio ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_6fa54834eb8a",
+        "role": "user",
+        "content": "give me topic of module 2",
+        "timestamp": "2026-08-25T19:20:47.523Z"
+      },
+      {
+        "id": "msg_0587d7095421",
+        "role": "assistant",
+        "content": "**Topic of Module II: Solution of Linear Algebraic Equations**\n\n* Topic: Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values, Gauss Seidel Iterative Method, Gauss Elimination Method",
+        "timestamp": "2026-08-25T19:20:47.523Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8949,
+            "excerpt": "... C307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integratio ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_ca7b99cab76a",
+        "role": "user",
+        "content": "give me topic of module 2",
+        "timestamp": "2026-08-25T19:20:48.678Z"
+      },
+      {
+        "id": "msg_4f4d838bf323",
+        "role": "assistant",
+        "content": "**Topic of Module II: Solution of Linear Algebraic Equations**\n\n* Topic: Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values, Gauss Seidel Iterative Method, Gauss Elimination Method",
+        "timestamp": "2026-08-25T19:20:48.678Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8949,
+            "excerpt": "... C307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integratio ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_2c716915f150",
+        "role": "user",
+        "content": "give me topic of module 2",
+        "timestamp": "2026-08-25T19:20:49.909Z"
+      },
+      {
+        "id": "msg_f3d36ba1bf0c",
+        "role": "assistant",
+        "content": "**Topic of Module II: Solution of Linear Algebraic Equations**\n\n* Topic: Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values, Gauss Seidel Iterative Method, Gauss Elimination Method",
+        "timestamp": "2026-08-25T19:20:49.909Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8949,
+            "excerpt": "... C307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integratio ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_a88a09b326ed",
+        "role": "user",
+        "content": "give me topic of module 2",
+        "timestamp": "2026-08-25T19:20:51.246Z"
+      },
+      {
+        "id": "msg_de2afb7243de",
+        "role": "assistant",
+        "content": "**Topic of Module II: Solution of Linear Algebraic Equations**\n\n* Topic: Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values, Gauss Seidel Iterative Method, Gauss Elimination Method",
+        "timestamp": "2026-08-25T19:20:51.246Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8949,
+            "excerpt": "... C307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integratio ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 3
+      },
+      {
+        "id": "msg_04a0cc505bbf",
+        "role": "user",
+        "content": "give me topic of module 2",
+        "timestamp": "2026-08-25T19:20:52.436Z"
+      },
+      {
+        "id": "msg_d64ad317c011",
+        "role": "assistant",
+        "content": "**Topic of Module II: Solution of Linear Algebraic Equations**\n\n* Topic: Introduction to Matrices, Basic Definitions, Matrix Inversion Method, Gauss Jordan Method, Eigen Values, Gauss Seidel Iterative Method, Gauss Elimination Method",
+        "timestamp": "2026-08-25T19:20:52.436Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_6ea0_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "Module III: Solution of Algebraic and Transcendental Equations\n20 Introduction, Bisection Method, Regula Falsi Method, Secant Method, Iteration Method, Newton Raphson\nMethod, Rate of Convergence\nModule IV: Interpolation a ..."
+          },
+          {
+            "chunkId": "chk_doc_6ea0_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8949,
+            "excerpt": "... C307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques. Topics included are numerical error, root-finding, interpolation and polynomial approximation.\nnumerical differentiation and integratio ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      }
+    ],
+    "sess_ixe2skh9": [
+      {
+        "id": "msg_0cc4a5e82b61",
+        "role": "user",
+        "content": "What is the name of module 1?",
+        "timestamp": "2026-08-25T20:01:58.542Z"
+      },
+      {
+        "id": "msg_74b3e4f924bc",
+        "role": "assistant",
+        "content": "**Module I Introduction to Network Security** is the name of Module 1.",
+        "timestamp": "2026-08-25T20:01:58.542Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9126,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 37435
+      },
+      {
+        "id": "msg_a68372a7b71a",
+        "role": "user",
+        "content": "give me topics of module 2?",
+        "timestamp": "2026-08-25T20:02:55.716Z"
+      },
+      {
+        "id": "msg_961327d0d85b",
+        "role": "assistant",
+        "content": "**Module II Secret Key and Public Key Cryptography** covers the following topics:\n\n1. Modern Block Ciphers\n2. Block Ciphers Principles\n3. Data Encryption Standard (DES)\n4. Strength of DES\n5. Block Cipher Modes of Operations\n6. Triple DES",
+        "timestamp": "2026-08-25T20:02:55.716Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "Advanced Encryption Standard (AES), Principals of Public Key Crypto Systems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8971,
+            "excerpt": "Course Title: Fundamental of Network Security\nCourse Credit:03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 5071
+      },
+      {
+        "id": "msg_988525f15086",
+        "role": "user",
+        "content": "What is the name of module 1?",
+        "timestamp": "2026-08-25T20:03:24.518Z"
+      },
+      {
+        "id": "msg_31e7e13261a4",
+        "role": "assistant",
+        "content": "**Module I Introduction to Network Security** is the name of Module 1.",
+        "timestamp": "2026-08-25T20:03:24.518Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9126,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_289da130db86",
+        "role": "user",
+        "content": "what is the capital of India?",
+        "timestamp": "2026-08-25T20:04:29.279Z"
+      },
+      {
+        "id": "msg_b7d838b44515",
+        "role": "assistant",
+        "content": "The uploaded document does not contain sufficient information to answer this question.",
+        "timestamp": "2026-08-25T20:04:29.279Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9949,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.958,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9949,
+        "latencyMs": 24653
+      }
+    ],
+    "sess_ixe2skh9 ": [
+      {
+        "id": "msg_3e0fee0f8905",
+        "role": "user",
+        "content": "What is the name of module 1?",
+        "timestamp": "2026-08-25T20:06:51.368Z"
+      },
+      {
+        "id": "msg_0fcbc6e93424",
+        "role": "assistant",
+        "content": "**Module I Introduction to Network Security** is the name of Module 1.",
+        "timestamp": "2026-08-25T20:06:51.368Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9126,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_0dcd2cce0b9e",
+        "role": "user",
+        "content": "What is the name of module 1?",
+        "timestamp": "2026-08-25T20:07:03.400Z"
+      },
+      {
+        "id": "msg_2a7bf99db41f",
+        "role": "assistant",
+        "content": "**Module I Introduction to Network Security** is the name of Module 1.",
+        "timestamp": "2026-08-25T20:07:03.400Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9126,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_f85140640950",
+        "role": "user",
+        "content": "What is the name of module 1?",
+        "timestamp": "2026-08-25T20:07:04.609Z"
+      },
+      {
+        "id": "msg_2519e6381e45",
+        "role": "assistant",
+        "content": "**Module I Introduction to Network Security** is the name of Module 1.",
+        "timestamp": "2026-08-25T20:07:04.609Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9126,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_d6c3c6ffee10",
+        "role": "user",
+        "content": "What is the name of module 1?",
+        "timestamp": "2026-08-25T20:07:05.654Z"
+      },
+      {
+        "id": "msg_2fab3c84acea",
+        "role": "assistant",
+        "content": "**Module I Introduction to Network Security** is the name of Module 1.",
+        "timestamp": "2026-08-25T20:07:05.654Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9126,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_7425150d537e",
+        "role": "user",
+        "content": "What is the name of module 1?",
+        "timestamp": "2026-08-25T20:07:06.738Z"
+      },
+      {
+        "id": "msg_32a343f4811e",
+        "role": "assistant",
+        "content": "**Module I Introduction to Network Security** is the name of Module 1.",
+        "timestamp": "2026-08-25T20:07:06.738Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9126,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_e4e694b0fa0b",
+        "role": "user",
+        "content": "What is the name of module 1?",
+        "timestamp": "2026-08-25T20:07:07.804Z"
+      },
+      {
+        "id": "msg_86af3b54579e",
+        "role": "assistant",
+        "content": "**Module I Introduction to Network Security** is the name of Module 1.",
+        "timestamp": "2026-08-25T20:07:07.804Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9126,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 3
+      },
+      {
+        "id": "msg_90e26160316f",
+        "role": "user",
+        "content": "What is the name of module 1?",
+        "timestamp": "2026-08-25T20:07:08.588Z"
+      },
+      {
+        "id": "msg_3f68dd1a557d",
+        "role": "assistant",
+        "content": "**Module I Introduction to Network Security** is the name of Module 1.",
+        "timestamp": "2026-08-25T20:07:08.588Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9126,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_b61d68342d8f",
+        "role": "user",
+        "content": "What is the name of module 1?",
+        "timestamp": "2026-08-25T20:07:09.445Z"
+      },
+      {
+        "id": "msg_65da4af827d4",
+        "role": "assistant",
+        "content": "**Module I Introduction to Network Security** is the name of Module 1.",
+        "timestamp": "2026-08-25T20:07:09.445Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9126,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_32c634fa1aa0",
+        "role": "user",
+        "content": "What is the name of module 1?",
+        "timestamp": "2026-08-25T20:07:10.348Z"
+      },
+      {
+        "id": "msg_06d63096567b",
+        "role": "assistant",
+        "content": "**Module I Introduction to Network Security** is the name of Module 1.",
+        "timestamp": "2026-08-25T20:07:10.348Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9126,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_96ed5a512341",
+        "role": "user",
+        "content": "What is the name of module 1?",
+        "timestamp": "2026-08-25T20:07:11.298Z"
+      },
+      {
+        "id": "msg_529ea0936e0c",
+        "role": "assistant",
+        "content": "**Module I Introduction to Network Security** is the name of Module 1.",
+        "timestamp": "2026-08-25T20:07:11.298Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_848b_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 1,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_848b_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9126,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 1,
+        "latencyMs": 1
       }
     ]
   }
