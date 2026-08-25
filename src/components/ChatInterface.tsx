@@ -33,7 +33,7 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputQuestion, setInputQuestion] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [providerOverride, setProviderOverride] = useState<"gemini" | "ollama" | "groq" | "openai">("ollama");
+  const [providerOverride] = useState<"ollama">("ollama");
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Load session history
@@ -161,19 +161,9 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
 
         {/* Controls */}
         <div className="flex items-center space-x-2">
-          {/* Provider toggle */}
-          <div className="flex items-center space-x-1 text-xs bg-white border border-slate-200 rounded-lg p-1">
-            <Cpu className="w-3.5 h-3.5 text-slate-400 ml-1" />
-            <select
-              value={providerOverride}
-              onChange={(e: any) => setProviderOverride(e.target.value)}
-              className="text-[11px] font-medium text-slate-700 bg-transparent focus:outline-none pr-1"
-            >
-              <option value="gemini">Gemini 3.7 Flash</option>
-              <option value="ollama">Ollama (Local)</option>
-              <option value="groq">Groq Llama-3.3</option>
-              <option value="openai">OpenAI GPT-4o</option>
-            </select>
+          <div className="flex items-center space-x-1.5 text-xs bg-white border border-slate-200 rounded-lg px-2.5 py-1.5">
+            <Cpu className="w-3.5 h-3.5 text-slate-400" />
+            <span className="text-[11px] font-medium text-slate-700">Ollama (Local)</span>
           </div>
 
           <button

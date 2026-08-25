@@ -55,7 +55,7 @@ class DocumentStore {
           fs.mkdirSync(this.dataDir, { recursive: true });
         }
         fs.writeFileSync(tmpPath, JSON.stringify(this.memoryData, null, 2), "utf-8");
-        try {
+         try {
           fs.renameSync(tmpPath, this.filePath);
         } catch (error: any) {
           if (!["EPERM", "EACCES", "EBUSY"].includes(error.code)) {

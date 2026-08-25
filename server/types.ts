@@ -52,7 +52,7 @@ export interface ChatRequest {
   documentId: string;
   sessionId: string;
   question: string;
-  llmProviderOverride?: "gemini" | "ollama" | "groq" | "openai";
+  llmProviderOverride?: "ollama" | "groq" | "openai";
 }
 
 export interface ChatResponse {

@@ -92,16 +92,14 @@ export const SystemDiagnostics: React.FC = () => {
               <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider">LLM Provider</h3>
             </div>
             <span className="px-2 py-0.5 text-[10px] font-bold rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200">
-              {configData?.llmProvider?.toUpperCase() || "GEMINI"}
+              {configData?.llmProvider?.toUpperCase() || "OLLAMA"}
             </span>
           </div>
 
           <div className="space-y-1.5 text-xs text-slate-600">
             <div className="flex justify-between py-1 border-b border-slate-100">
               <span>Active Engine:</span>
-              <span className="font-semibold text-slate-800">
-                {configData?.llmProvider === "gemini" ? "Google Gemini 3.7 Flash" : configData?.llmProvider}
-              </span>
+              <span className="font-semibold text-slate-800">Ollama</span>
             </div>
             <div className="flex justify-between py-1 border-b border-slate-100">
               <span>Ollama Local URL:</span>

@@ -41,7 +41,6 @@ systemRouter.get("/ready", async (_req: Request, res: Response): Promise<any> =>
         },
         llm: {
           activeProvider: config.llmProvider,
-          geminiConfigured: !!process.env.GEMINI_API_KEY || !!config.geminiApiKey,
           ollamaBaseUrl: config.ollama.baseUrl,
           ollamaModel: config.ollama.model,
           groqConfigured: !!config.groq.apiKey,

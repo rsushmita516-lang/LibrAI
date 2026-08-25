@@ -79,7 +79,6 @@ export interface SystemStatus {
     };
     llm: {
       activeProvider: string;
-      geminiConfigured: boolean;
       ollamaBaseUrl: string;
       ollamaModel: string;
       groqConfigured: boolean;

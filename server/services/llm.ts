@@ -1,4 +1,3 @@
-import { GoogleGenAI } from "@google/genai";
 import { config } from "../config.js";
 
 export interface LLMMessage {
@@ -8,7 +7,7 @@ export interface LLMMessage {
 
 export interface LLMGenerateParams {
   messages: LLMMessage[];
-  provider?: "gemini" | "ollama" | "groq" | "openai";
+  provider?: "ollama" | "groq" | "openai";
   temperature?: number;
 }
 
@@ -16,54 +15,6 @@ export interface LLMResponse {
   content: string;
   provider: string;
   model: string;
-}
-
-// Lazy-initialized Gemini client
-let geminiClient: GoogleGenAI | null = null;
-function getGeminiClient(): GoogleGenAI {
-  if (!geminiClient) {
-    geminiClient = new GoogleGenAI({
-      apiKey: process.env.GEMINI_API_KEY || config.geminiApiKey,
-      httpOptions: {
-        headers: {
-          "User-Agent": "librai-server",
-        },
-      },
-    });
-  }
-  return geminiClient;
-}
-
-/**
- * Calls Gemini using @google/genai SDK
- */
-async function callGemini(messages: LLMMessage[]): Promise<LLMResponse> {
-  const ai = getGeminiClient();
-  const model = "gemini-3.7-flash";
-
-  const systemMsg = messages.find((m) => m.role === "system")?.content || "";
-  const chatMessages = messages.filter((m) => m.role !== "system");
-
-  // Format contents for generateContent
-  const contents = chatMessages.map((m) => ({
-    role: m.role === "assistant" ? "model" : "user",
-    parts: [{ text: m.content }],
-  }));
-
-  const response = await ai.models.generateContent({
-    model,
-    contents,
-    config: {
-      systemInstruction: systemMsg,
-      temperature: 0.2, // Low temperature for high factual precision
-    },
-  });
-
-  return {
-    content: response.text?.trim() || "No response generated.",
-    provider: "gemini",
-    model,
-  };
 }
 
 /**
@@ -176,30 +127,16 @@ async function callOpenAI(messages: LLMMessage[]): Promise<LLMResponse> {
 export async function generateLLMAnswer(params: LLMGenerateParams): Promise<LLMResponse> {
   const provider = params.provider || config.llmProvider;
 
-  // 1. Try specified provider
   try {
     if (provider === "ollama") {
       return await callOllama(params.messages);
     } else if (provider === "groq") {
       return await callGroq(params.messages);
-    } else if (provider === "openai") {
-      return await callOpenAI(params.messages);
-    } else {
-      // Default: Gemini
-      return await callGemini(params.messages);
     }
+
+    return await callOpenAI(params.messages);
   } catch (primaryErr: any) {
     console.warn(`[LLM] Primary provider '${provider}' failed:`, primaryErr.message);
-
-    // If Ollama failed (e.g. user requested Ollama on local machine without running Ollama yet), fallback to Gemini if API key present
-    if (provider !== "gemini" && (process.env.GEMINI_API_KEY || config.geminiApiKey)) {
-      try {
-        console.log("[LLM] Falling back to Gemini API...");
-        return await callGemini(params.messages);
-      } catch (geminiErr: any) {
-        console.warn("[LLM] Gemini fallback also failed:", geminiErr.message);
-      }
-    }
 
     // Extractive fallback when no external LLM is reachable
     console.log("[LLM] Using high-fidelity extractive grounding fallback synthesizer.");

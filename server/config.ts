@@ -4,8 +4,7 @@ dotenv.config();
 export interface AppConfig {
   port: number;
   appUrl: string;
-  geminiApiKey: string;
-  llmProvider: "gemini" | "ollama" | "groq" | "openai";
+  llmProvider: "ollama" | "groq" | "openai";
   ollama: {
     baseUrl: string;
     model: string;
@@ -39,8 +38,7 @@ export interface AppConfig {
 export const config: AppConfig = {
   port: parseInt(process.env.PORT || "3000", 10),
   appUrl: process.env.APP_URL || "http://localhost:3000",
-  geminiApiKey: process.env.GEMINI_API_KEY || "",
-  llmProvider: (process.env.LLM_PROVIDER as AppConfig["llmProvider"]) || "gemini",
+  llmProvider: (process.env.LLM_PROVIDER as AppConfig["llmProvider"]) || "ollama",
   ollama: {
     baseUrl: process.env.OLLAMA_BASE_URL || "http://127.0.0.1:11434",
     model: process.env.OLLAMA_MODEL || "llama3.2",

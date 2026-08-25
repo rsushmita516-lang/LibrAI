@@ -15,21 +15,6 @@
       "totalTokens": 1194,
       "summary": "Course Name: COMPUTER ORIENTED NUMERICAL ANALYSIS\nCourse Level : UG\nCourse Code: DSC307\nCredit Units: 04\nCourse Objective:\nThe course consists of\ntheory and application of numerical approximation techniques.\nTopics included are numerical error, root-finding, interpolation and polynomial approximatio..."
     },
-    "doc_sample_librai_manual": {
-      "id": "doc_sample_librai_manual",
-      "filename": "LibrAI_Architecture_Manual.md",
-      "originalName": "LibrAI_Architecture_Manual.md",
-      "mimeType": "text/markdown",
-      "sizeBytes": 2215,
-      "checksum": "cecd9286ef0d30be8dbe63dc348bd8f9f00d7c1964f2e772289493be10679d26",
-      "status": "ready",
-      "pageCount": 4,
-      "totalTokens": 554,
-      "chunkCount": 1,
-      "createdAt": "2026-08-24T17:38:43.287Z",
-      "updatedAt": "2026-08-24T17:38:43.287Z",
-      "summary": "Comprehensive architectural and operational manual for the LibrAI Document Assistant system."
-    },
     "doc_4b6f064d83dac615": {
       "id": "doc_4b6f064d83dac615",
       "filename": "doc_4b6f064d83dac615_NewSyllabus_Network Security.pdf",
@@ -154,35 +139,6 @@
           "continuous",
           "internal",
           "end"
-        ]
-      }
-    ],
-    "doc_sample_librai_manual": [
-      {
-        "id": "chk_doc_samp_0",
-        "documentId": "doc_sample_librai_manual",
-        "chunkIndex": 0,
-        "text": "# LibrAI Technical Reference & Architecture Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architecture comprising:\n1. Ingestion Pipeline: High-speed PDF/TXT parsing with UTF-8 normalization and page offset indexing. 2. Semantic Chunking: Sentence-boundary packaging with an 800-token target size and a 120-token sliding overlap window to guarantee conversational context continuity. 3. Hybrid Retrieval: Combining BM25 keyword matching with dense vector similarity and Reciprocal Rank Fusion (RRF). 4. Redis Caching & Rate Limiting: Utilizing sliding-window rate limiters, multi-turn conversation session stores with configurable TTL, and normalized query response caching. ## Section 2: Retrieval Strategies and Context Management\nTo prevent context overflow and reduce model hallucination:\n- Only the top-k highest scoring passages (default: 4 chunks) are passed to the LLM system prompt.\n- Conversation history is trimmed dynamically to maintain strict adherence to model context limits (max 1,200 history tokens).\n- The prompt enforces strict negative grounding: if a user's question cannot be completely answered by the context, the model explicitly refuses to speculate and returns an unavailable status. ## Section 3: Evidence Mode & Grounding Verification\nLibrAI's unique \"Evidence Mode\" original feature provides:\n- Exact character excerpt extraction and chunk citations (e.g. [Page 1, Chunk 2]).\n- An automated confidence score calculated from BM25 and semantic similarity weights.\n- Grounding status classification: 'supported' (confidence >= 0.45), 'insufficient' (low confidence or missing evidence), or 'unsupported' (irrelevant query). ## Section 4: Performance Benchmarks and Scalability\nUnder typical production loads:\n- Cache hits return in under 15ms with the header \"cached: true\".\n- Chunking processes 100 pages of text in under 450ms.\n- Hybrid BM25 lookup evaluates across 10,000 chunks in sub-8ms latency.\n- Supported file types include PDF, TXT, and Markdown files up to 10MB in size.",
-        "pageNumber": 1,
-        "startChar": 0,
-        "endChar": 2211,
-        "tokenCount": 553,
-        "keywords": [
-          "context",
-          "section",
-          "librai",
-          "architecture",
-          "bm25",
-          "model",
-          "grounding",
-          "evidence",
-          "confidence",
-          "document",
-          "system",
-          "pdf",
-          "txt",
-          "page",
-          "semantic"
         ]
       }
     ],
@@ -1311,6 +1267,961 @@
         "evidenceStatus": "supported",
         "confidenceScore": 0.9949,
         "latencyMs": 94431
+      }
+    ],
+    "demo-session": [
+      {
+        "id": "msg_f6783373c081",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T14:56:29.371Z"
+      },
+      {
+        "id": "msg_e4f29abbb6bb",
+        "role": "assistant",
+        "content": "**Document Summary**\n\nThis document appears to be a course syllabus for a university course titled \"Fundamental of Network Security\" (CSIT335). The course is designed to introduce students to the concepts of network security and cryptography, with a focus on securing networks in an unreliable environment.\n\n**Key Course Objectives**\n\nThe course aims to equip students with the technical skills necessary to manage sophisticated and vulnerable computer network environments. The key objectives of the course include:\n\n* Providing a conceptual understanding of network security issues\n* Developing basic skills of secure network architecture\n* Identifying common network vulnerabilities and attacks\n* Exploring the requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each covering a specific aspect of network security:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment and Evaluation**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including continuous assessment, internal assessment, end-term examinations, and project-based learning.\n\n**Reference Materials**\n\nThe course references various textbooks, including \"Networks Security Essentials\" and \"Cryptography and Network Security\", as well as online resources and articles.",
+        "timestamp": "2026-08-25T14:56:29.371Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 121044
+      }
+    ],
+    "sess_7l430ucw": [
+      {
+        "id": "msg_ab377541479b",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T14:57:46.918Z"
+      },
+      {
+        "id": "msg_342f70c74072",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T14:57:46.919Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 91932
+      },
+      {
+        "id": "msg_526e609c51ed",
+        "role": "user",
+        "content": "What is the target chunk size and overlap used in LibrAI's chunking strategy?",
+        "timestamp": "2026-08-25T15:09:41.089Z"
+      },
+      {
+        "id": "msg_18df4832d213",
+        "role": "assistant",
+        "content": "Unfortunately, the provided document excerpts do not explicitly mention the target chunk size and overlap used in LibrAI's chunking strategy.\n\nHowever, based on the context and the typical practices in natural language processing (NLP) and information retrieval, I can make an educated guess.\n\n**Typical Chunking Strategies**\n\nIn NLP and information retrieval, chunking strategies often involve dividing text into smaller units, called chunks, to facilitate processing, analysis, and retrieval of information. The chunk size and overlap can vary depending on the specific application, dataset, and requirements.\n\n**Common Chunking Strategies**\n\nSome common chunking strategies include:\n\n1. **Sentence chunking**: dividing text into individual sentences.\n2. **Token chunking**: dividing text into individual words or tokens.\n3. **Named Entity Recognition (NER)**: identifying and extracting named entities, such as people, organizations, and locations.\n4. **Part-of-speech (POS) chunking**: dividing text into individual parts of speech, such as nouns, verbs, and adjectives.\n\n**LibrAI's Chunking Strategy**\n\nWithout explicit information on LibrAI's chunking strategy, I can only speculate that it may use a combination of these strategies, tailored to the specific requirements of the task or application.\n\nIf you have any further information or clarification on LibrAI's chunking strategy, I would be happy to try and provide a more accurate answer.",
+        "timestamp": "2026-08-25T15:09:41.089Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0.591,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection sys ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.4425,
+            "excerpt": "... G\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provide conceptual under ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.405,
+            "excerpt": "... ems, RSA algorithm, Security of RSA\nalgorithm. Module III Authentication Standards\n15% Message Authentication Codes: Requirements and functions of Message Authentication Code, Hash Functions, Secure\nHash Algorithm (SHA), Message Digest\nDigital Signatures: Digi ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0.2145,
+            "excerpt": "... . Stallings, “Networks Security Essentials: Application & Standards”, 5th Edition, Prentice Hall Publication, 2013\n• W. Stallings, “Cryptography and Network Security: Principles and Practice”, International Edition, Pearson Education, 2013.\n• Behrouz A. Frouza ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.591,
+        "latencyMs": 165768
+      },
+      {
+        "id": "msg_939da75ef6d7",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:18:44.602Z"
+      },
+      {
+        "id": "msg_9c46b3eb42f2",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:18:44.602Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 3
+      },
+      {
+        "id": "msg_7cad76171a89",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:18:46.049Z"
+      },
+      {
+        "id": "msg_2db2da9a7347",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:18:46.049Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_db06ae858d12",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:18:47.451Z"
+      },
+      {
+        "id": "msg_d22bef9b009e",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:18:47.451Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_86c58861a742",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:19:02.153Z"
+      },
+      {
+        "id": "msg_c1399f541260",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:19:02.153Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_bbcb79cffcbe",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:19:04.501Z"
+      },
+      {
+        "id": "msg_bb221df47607",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:19:04.501Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_b879be6cc2ac",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:19:12.166Z"
+      },
+      {
+        "id": "msg_88c912f1af64",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:19:12.166Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_048e95429fa7",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:22:07.552Z"
+      },
+      {
+        "id": "msg_37f642896bd0",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:22:07.552Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_8f84fda46c7b",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:22:08.933Z"
+      },
+      {
+        "id": "msg_7b0b56a0b9e1",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:22:08.933Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_11b0844865fe",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:22:10.290Z"
+      },
+      {
+        "id": "msg_7341b642aa3d",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:22:10.290Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_46bf7354e60c",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:22:11.528Z"
+      },
+      {
+        "id": "msg_450a2d574c78",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:22:11.528Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_3ac8c65f0970",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:22:12.847Z"
+      },
+      {
+        "id": "msg_bf0fb75ce34d",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:22:12.847Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_f0efe53f516c",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:22:14.124Z"
+      },
+      {
+        "id": "msg_909edd609df8",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:22:14.124Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_f9c8e494e3b7",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:22:15.409Z"
+      },
+      {
+        "id": "msg_26d5df6f7efa",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:22:15.409Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_644e71984ede",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:22:16.702Z"
+      },
+      {
+        "id": "msg_a816e4184838",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:22:16.702Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 1
+      },
+      {
+        "id": "msg_7d839f85338b",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:22:18.046Z"
+      },
+      {
+        "id": "msg_51abe44c39aa",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:22:18.046Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 2
+      },
+      {
+        "id": "msg_eedeb584debd",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:22:19.643Z"
+      },
+      {
+        "id": "msg_e2eb7646abbf",
+        "role": "assistant",
+        "content": "**Document Overview**\n\nThis document appears to be a course syllabus or a detailed outline for a university-level course titled \"Fundamental of Network Security\" (Course Code: CSIT335).\n\n**Key Information**\n\n* Course Level: Undergraduate (UG)\n* Course Credit: 3 credits\n* Course Objectives:\n\t+ Provide conceptual understanding of network security issues\n\t+ Develop basic skills of secure network architecture\n\t+ Describe common network vulnerabilities and attacks\n\t+ Explore requirements of real-time communication security and issues related to web services\n\n**Course Structure**\n\nThe course is divided into six modules, each with a specific weightage and learning outcomes. The modules cover topics such as:\n\n1. Introduction to Network Security\n2. Secret Key and Public Key Cryptography\n3. Authentication Standards\n4. Key Management\n5. Web Security\n6. System Security\n\n**Assessment Scheme**\n\nThe course assessment scheme includes a mix of theoretical and practical components, including:\n\n* Continuous Assessment/Internal Assessment\n* End Term Examination\n* Class Tests\n* Self-Work/PSDA (Professional Skill Development Activities)\n* Viva-Voce\n\n**Reference Materials**\n\nThe course references various textbooks, including:\n\n* W. Stallings, \"Networks Security Essentials: Application & Standards\", 5th Edition\n* W. Stallings, \"Cryptography and Network Security: Principles and Practice\", International Edition\n* Behrouz A. Frouzan, \"Cryptography and Network Security\"\n* Bruce Schiener, \"Applied Cryptography\", Second Edition\n* Bernard Menezes, \"Network Security and Cryptography\"\n* Atul Kahate, \"Cryptography and Network Security\"\n\nAdditionally, the course references online resources, including:\n\n* http://www.cnss.gov/Assets/pdf/cnssi_4009.pdf\n* http://en.wikipedia.org/wiki/Network_security",
+        "timestamp": "2026-08-25T15:22:19.643Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_4b6f_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.9692,
+            "excerpt": "... 03\nCourse Level: UG\nCourse Code: CSIT335\nCourse Objectives:\nThis course gives the introduction and concepts of Network Security and Cryptography to secure the network over unreliable environment. The objectives of this course can be illustrated as:\n➢ To provid ..."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_1",
+            "pageNumber": 2,
+            "chunkIndex": 1,
+            "relevanceScore": 0.6181,
+            "excerpt": "... for securing the networks of all sizes. After completion of this course, students will be able to:\nIdentify different types of security threats, attacks and encryption techniques."
+          },
+          {
+            "chunkId": "chk_doc_4b6f_2",
+            "pageNumber": 3,
+            "chunkIndex": 2,
+            "relevanceScore": 0,
+            "excerpt": "Identify and Apply different encryption algorithms\nApply authentication techniques in solving authentication issues\nIdentify key management techniques and standards\nIdentify different issues related to web security. Identify the use of intrusion detection syst"
+          },
+          {
+            "chunkId": "chk_doc_4b6f_3",
+            "pageNumber": 4,
+            "chunkIndex": 3,
+            "relevanceScore": 0,
+            "excerpt": "Theory Assessment (L&T):\nContinuous Assessment / Internal Assessment End Term Examination\nComponents\n(Drop down)\nAttendance Class Test Self-Work / PSDA Viva-Voce\nWeightage (%)\n5 10 20 5 60\nText Book:\n• W. Stallings, “Networks Security Essentials: Application &"
+          }
+        ],
+        "cached": true,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.9692,
+        "latencyMs": 1
+      }
+    ],
+    "sess_7pvkerhn": [
+      {
+        "id": "msg_efb9f91154c5",
+        "role": "user",
+        "content": "What is this document about?",
+        "timestamp": "2026-08-25T15:11:40.108Z"
+      },
+      {
+        "id": "msg_ebc3d09d4a9a",
+        "role": "assistant",
+        "content": "**Document Overview**\n=====================\n\nThis document provides an overview of LibrAI, a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence.\n\n**Key Topics**\n---------------\n\n*   **Architecture**: The document describes the decoupled layered architecture of LibrAI, including the ingestion pipeline, semantic chunking, hybrid retrieval, and Redis caching & rate limiting.\n*   **Retrieval Strategies**: It discusses the retrieval strategies used by LibrAI, including top-k highest scoring passages, conversation history trimming, and negative grounding.\n*   **Evidence Mode**: The document introduces LibrAI's unique \"Evidence Mode\" feature, which provides exact character excerpt extraction, chunk citations, and automated confidence scores.\n*   **Performance Benchmarks**: It presents performance benchmarks for LibrAI, including cache hits, chunking times, and hybrid BM25 lookup latency.\n\n**Summary**\n----------\n\nThis document serves as a technical reference and architecture manual for LibrAI, providing an in-depth look at its design, features, and performance capabilities.",
+        "timestamp": "2026-08-25T15:11:40.108Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8219,
+            "excerpt": "... Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architectu ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.8219,
+        "latencyMs": 62162
+      },
+      {
+        "id": "msg_f7c04f1a8109",
+        "role": "user",
+        "content": "what is this project about?",
+        "timestamp": "2026-08-25T15:12:43.434Z"
+      },
+      {
+        "id": "msg_2963e6597223",
+        "role": "assistant",
+        "content": "**Project Overview**\n=====================\n\nThe project appears to be focused on developing a highly advanced AI-powered document assistant, specifically designed for digital libraries, assessment tools, and enterprise document intelligence.\n\n**Key Features and Goals**\n-------------------------\n\n*   **Document Analysis**: The project aims to analyze and process large volumes of documents, including PDFs, TXTs, and Markdown files, to extract relevant information and provide insights.\n*   **Conversational Interface**: The project includes a conversational interface that enables users to interact with the AI assistant, asking questions and receiving answers based on the analyzed documents.\n*   **Contextual Understanding**: The project emphasizes the importance of contextual understanding, using techniques such as semantic chunking and negative grounding to ensure accurate and relevant responses.\n\n**Target Applications**\n----------------------\n\n*   **Digital Libraries**: The project is designed to support digital libraries, providing a powerful tool for managing and analyzing large collections of documents.\n*   **Assessment Tools**: The project aims to develop assessment tools that can analyze and score documents, providing accurate and reliable results.\n*   **Enterprise Document Intelligence**: The project is focused on providing enterprise-level document intelligence, enabling organizations to gain valuable insights from their document collections.\n\n**Overall**\n----------\n\nThe project is a comprehensive effort to develop a highly advanced AI-powered document assistant that can analyze, process, and provide insights from large volumes of documents, with a focus on contextual understanding and conversational interfaces.",
+        "timestamp": "2026-08-25T15:12:43.435Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.411,
+            "excerpt": "... Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architectu ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "insufficient",
+        "confidenceScore": 0.411,
+        "latencyMs": 54250
+      },
+      {
+        "id": "msg_be5b125fc389",
+        "role": "user",
+        "content": "what is chunking ?",
+        "timestamp": "2026-08-25T15:14:15.751Z"
+      },
+      {
+        "id": "msg_43c474ee301c",
+        "role": "assistant",
+        "content": "**Chunking**\n================\n\nIn the context of LibrAI, chunking refers to the process of breaking down a large document into smaller, manageable units, called \"chunks.\" These chunks are typically groups of 800 tokens (words or characters) that are extracted from the document and processed separately.\n\n**Semantic Chunking**\n--------------------\n\nSemantic chunking is a specific technique used in LibrAI to chunk documents. It involves identifying sentence boundaries and extracting chunks that contain relevant information. The goal of semantic chunking is to ensure that the chunks are contextually meaningful and can be used to answer user queries accurately.\n\n**Chunking Benefits**\n--------------------\n\nChunking provides several benefits, including:\n\n*   **Improved Contextual Understanding**: By breaking down documents into smaller chunks, LibrAI can better understand the context in which the information is presented.\n*   **Enhanced Accuracy**: Chunking enables LibrAI to focus on specific parts of the document that are relevant to the user's query, improving the accuracy of its responses.\n*   **Increased Efficiency**: Chunking allows LibrAI to process documents more efficiently, reducing the computational resources required to analyze large volumes of text.\n\n**Chunking in LibrAI**\n---------------------\n\nIn LibrAI, chunking is an essential component of the system's architecture. It is used to:\n\n*   **Extract Relevant Information**: Chunking helps LibrAI to extract relevant information from documents, which is then used to answer user queries.\n*   **Improve Contextual Understanding**: Chunking enables LibrAI to understand the context in which the information is presented, improving the accuracy of its responses.\n*   **Enhance Conversational Experience**: Chunking is used to ensure that LibrAI's responses are contextually relevant and accurate, providing a better conversational experience for users.",
+        "timestamp": "2026-08-25T15:14:15.751Z",
+        "citations": [
+          {
+            "chunkId": "chk_doc_samp_0",
+            "pageNumber": 1,
+            "chunkIndex": 0,
+            "relevanceScore": 0.8219,
+            "excerpt": "... Manual ## Section 1: Overview and Core Architecture\nLibrAI is a high-performance, production-grade AI Document Assistant designed for digital libraries, assessment tools, and enterprise document intelligence. The system features a decoupled layered architectu ..."
+          }
+        ],
+        "cached": false,
+        "evidenceStatus": "supported",
+        "confidenceScore": 0.8219,
+        "latencyMs": 84422
       }
     ]
   }
